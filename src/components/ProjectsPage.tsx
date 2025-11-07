@@ -1,26 +1,11 @@
-import { useEffect, useMemo, useState, type MouseEvent } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
-import {
-  ExternalLink,
-  Sparkles,
-  Code,
-  ShoppingCart,
-  Image as ImageIcon,
-  X,
-} from 'lucide-react';
+import { ExternalLink, Sparkles, Code, ShoppingCart, Image as ImageIcon } from 'lucide-react';
 
 import { useLanguage } from '../contexts/LanguageContext';
 import { cn } from './ui/utils';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from './ui/carousel';
 import {
   Dialog,
   DialogContent,
@@ -51,6 +36,7 @@ type Project = {
   longDescription: string;
   image: string;
   images?: string[];
+  imageGalleryUrl?: string;
   technologies: string[];
   features: string[];
   demoUrl?: string;
@@ -58,90 +44,6 @@ type Project = {
 };
 
 const GROUPS = ['AI Projects', 'Web Development', 'All Projects'] as const;
-
-function PreviewOverlay({
-  project,
-  onClose,
-}: {
-  project: Project | null;
-  onClose: () => void;
-}) {
-  useEffect(() => {
-    if (!project) {
-      return;
-    }
-
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [project, onClose]);
-
-  if (!project || !project.images || project.images.length === 0) {
-    return null;
-  }
-
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
-      role="dialog"
-      aria-modal="true"
-      onClick={onClose}
-    >
-      <div
-        className="relative w-full max-w-4xl overflow-hidden rounded-2xl border bg-background shadow-2xl"
-        onClick={(event) => event.stopPropagation()}
-      >
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute right-4 top-4 inline-flex size-9 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/60"
-          aria-label="Close preview"
-        >
-          <X size={18} />
-        </button>
-
-        <div className="border-b px-6 py-4">
-          <h3 className="text-lg font-semibold text-foreground">
-            {project.title} — Preview
-          </h3>
-          <p className="text-sm text-muted-foreground">{project.description}</p>
-        </div>
-
-        <div className="px-6 py-6">
-          <Carousel className="relative w-full">
-            <CarouselContent>
-              {project.images.map((src, index) => (
-                <CarouselItem key={`${project.title}-image-${index}`}>
-                  <div className="aspect-video w-full overflow-hidden rounded-lg border">
-                    <img
-                      src={src}
-                      alt={`${project.title} slide ${index + 1}`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
-          </Carousel>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function ProjectsPage() {
   const { t } = useLanguage();
@@ -242,7 +144,6 @@ export function ProjectsPage() {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [activeGroup, setActiveGroup] = useState<typeof GROUPS[number]>(GROUPS[0]);
-  const [previewProject, setPreviewProject] = useState<Project | null>(null);
 
   const projectsToDisplay =
     activeGroup === 'All Projects'
@@ -252,11 +153,6 @@ export function ProjectsPage() {
   const openDetails = (project: Project) => {
     setActiveProject(project);
     setDetailsOpen(true);
-  };
-
-  const handlePreview = (project: Project, event: MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    setPreviewProject(project);
   };
 
   return (
@@ -291,122 +187,126 @@ export function ProjectsPage() {
         </div>
 
         <div className="space-y-8">
-          {projectsToDisplay.map((project, index) => (
-            <motion.div
-              key={`${project.title}-${index}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card
-                className={cn(
-                  'overflow-hidden transition-all duration-300 hover:shadow-2xl',
-                  project.featured ? 'border-2 border-primary' : 'border-primary/20',
-                )}
-                role="button"
-                tabIndex={0}
-                onClick={() => openDetails(project)}
+          {projectsToDisplay.map((project, index) => {
+            const previewLink = project.imageGalleryUrl ?? project.images?.[0];
+
+            return (
+              <motion.div
+                key={`${project.title}-${index}`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="grid gap-6 md:grid-cols-5">
-                  <div className="md:col-span-2">
-                    <div className="relative h-64 w-full overflow-hidden md:h-full">
-                      <motion.img
-                        src={project.image}
-                        alt={project.title}
-                        className="h-full w-full object-cover"
-                        whileHover={{ scale: 1.08 }}
-                        transition={{ duration: 0.3 }}
-                      />
-                      {project.featured && (
-                        <Badge className="absolute right-4 top-4 bg-primary text-primary-foreground">
-                          {t('certifications.featured')}
-                        </Badge>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <Card
+                  className={cn(
+                    'overflow-hidden transition-all duration-300 hover:shadow-2xl',
+                    project.featured ? 'border-2 border-primary' : 'border-primary/20',
+                  )}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openDetails(project)}
+                >
+                  <div className="grid gap-6 md:grid-cols-5">
+                    <div className="md:col-span-2">
+                      <div className="relative h-64 w-full overflow-hidden md:h-full">
+                        <motion.img
+                          src={project.image}
+                          alt={project.title}
+                          className="h-full w-full object-cover"
+                          whileHover={{ scale: 1.08 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                        {project.featured && (
+                          <Badge className="absolute right-4 top-4 bg-primary text-primary-foreground">
+                            {t('certifications.featured')}
+                          </Badge>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                      </div>
+                    </div>
+                    <div className="p-6 md:col-span-3">
+                      <CardHeader className="mb-4 p-0">
+                        <div className="mb-2 flex items-center gap-2">
+                          {getCategoryIcon(project.category)}
+                          <Badge variant="outline" className="border-primary/20">
+                            {project.category}
+                          </Badge>
+                        </div>
+                        <CardTitle className="text-foreground">{project.title}</CardTitle>
+                        <CardDescription className="text-muted-foreground">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4 p-0">
+                        <p className="text-muted-foreground">{project.longDescription}</p>
+
+                        <div>
+                          <h4 className="mb-2 text-foreground">{t('projects.technologiesUsed')}</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <motion.div key={`${project.title}-tech-${tech}`} whileHover={{ scale: 1.05 }}>
+                                <Badge variant="secondary">{tech}</Badge>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <h4 className="mb-2 text-foreground">{t('projects.keyFeatures')}</h4>
+                          <ul className="grid gap-2 md:grid-cols-2">
+                            {project.features.slice(0, 6).map((feature, featureIndex) => (
+                              <motion.li
+                                key={`${project.title}-feature-${featureIndex}`}
+                                className="flex items-start gap-2 text-muted-foreground"
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.4 + featureIndex * 0.05 }}
+                              >
+                                <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
+                                <span>{feature}</span>
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="flex flex-wrap gap-3 pt-4">
+                          {project.demoUrl && (
+                            <a
+                              href={project.demoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              {t('projects.viewProject')}
+                              <ExternalLink size={16} />
+                            </a>
+                          )}
+                          {previewLink && (
+                            <a
+                              href={previewLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent/40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <ImageIcon size={16} />
+                              Preview Images
+                            </a>
+                          )}
+                        </div>
+                      </CardContent>
                     </div>
                   </div>
-                  <div className="md:col-span-3 p-6">
-                    <CardHeader className="mb-4 p-0">
-                      <div className="mb-2 flex items-center gap-2">
-                        {getCategoryIcon(project.category)}
-                        <Badge variant="outline" className="border-primary/20">
-                          {project.category}
-                        </Badge>
-                      </div>
-                      <CardTitle className="text-foreground">{project.title}</CardTitle>
-                      <CardDescription className="text-muted-foreground">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4 p-0">
-                      <p className="text-muted-foreground">{project.longDescription}</p>
-
-                      <div>
-                        <h4 className="mb-2 text-foreground">{t('projects.technologiesUsed')}</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech) => (
-                            <motion.div key={`${project.title}-tech-${tech}`} whileHover={{ scale: 1.05 }}>
-                              <Badge variant="secondary">{tech}</Badge>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="mb-2 text-foreground">{t('projects.keyFeatures')}</h4>
-                        <ul className="grid gap-2 md:grid-cols-2">
-                          {project.features.slice(0, 6).map((feature, featureIndex) => (
-                            <motion.li
-                              key={`${project.title}-feature-${featureIndex}`}
-                              className="flex items-start gap-2 text-muted-foreground"
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.4 + featureIndex * 0.05 }}
-                            >
-                              <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
-                              <span>{feature}</span>
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="flex flex-wrap gap-3 pt-4">
-                        {project.demoUrl && (
-                          <a
-                            href={project.demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                            onClick={(event) => event.stopPropagation()}
-                          >
-                            {t('projects.viewProject')}
-                            <ExternalLink size={16} />
-                          </a>
-                        )}
-                        {project.images && project.images.length > 0 && (
-                          <Button
-                            variant="outline"
-                            className="inline-flex items-center gap-2"
-                            onClick={(event) => handlePreview(project, event)}
-                          >
-                            <ImageIcon size={16} />
-                            Preview Images
-                          </Button>
-                        )}
-                      </div>
-                    </CardContent>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
-
-        <PreviewOverlay project={previewProject} onClose={() => setPreviewProject(null)} />
 
         <Dialog
           open={detailsOpen}
-          onOpenChange={(open) => {
+          onOpenChange={(open: boolean) => {
             setDetailsOpen(open);
             if (!open) {
               setActiveProject(null);
@@ -459,4 +359,3 @@ export function ProjectsPage() {
     </div>
   );
 }
-
