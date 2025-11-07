@@ -1,11 +1,11 @@
 import { Award, ExternalLink, Calendar } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import fmaLogo from '../assets/fmalogo.png';
 import cacttusLogo from '../assets/cactuslogo.png';
+import { Link } from 'react-router-dom';
 
 export function CertificationsPage() {
   const { t } = useLanguage();
@@ -34,6 +34,7 @@ export function CertificationsPage() {
       ],
       project: t('projects.eduflow.title'),
       projectDescription: t('certifications.aiSpecialist.projectDescription'),
+      projectLink: '/projects#eduflow',
       featured: true,
     },
     {
@@ -170,10 +171,35 @@ export function CertificationsPage() {
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: 'spring', stiffness: 400 }}
                     >
-                      <h4 className="text-foreground mb-2">
-                        {t('certifications.capstoneProject')}: {cert.project}
-                      </h4>
-                      <p className="text-muted-foreground">{cert.projectDescription}</p>
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <div>
+                          <h4 className="text-foreground mb-2">
+                            {t('certifications.capstoneProject')}:{' '}
+                            {cert.projectLink ? (
+                              <Link
+                                to={cert.projectLink}
+                                className="text-primary hover:underline font-semibold"
+                              >
+                                {cert.project}
+                              </Link>
+                            ) : (
+                              cert.project
+                            )}
+                          </h4>
+                          <p className="text-muted-foreground mb-0">
+                            {cert.projectDescription}
+                          </p>
+                        </div>
+                        {cert.projectLink && (
+                          <Link
+                            to={cert.projectLink}
+                            className="inline-flex items-center justify-center gap-2 rounded-md border border-primary/30 bg-background px-4 py-2 text-primary hover:bg-primary/10 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                          >
+                            {t('projects.viewProject')}
+                            <ExternalLink size={16} />
+                          </Link>
+                        )}
+                      </div>
                     </motion.div>
                   )}
 

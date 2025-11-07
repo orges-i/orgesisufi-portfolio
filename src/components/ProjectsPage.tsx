@@ -4,6 +4,14 @@ import {
   Code,
   ShoppingCart,
   Image as ImageIcon,
+  GripHorizontal,
+  FileText,
+  Smartphone,
+  Link2,
+  Paintbrush,
+  Lock,
+  Database,
+  MapPin,
 } from "lucide-react";
 import {
   Card,
@@ -30,7 +38,11 @@ import eduflow1 from "../assets/eduflow1.png";
 import eduflow2 from "../assets/eduflow2.png";
 import eduflow3 from "../assets/eduflow3.png";
 import eduflow4 from "../assets/eduflow4.png";
+import aerocommandImage from "../assets/aerocommandthumbnail.png";
 import developerThumbnail from "../assets/developerportfoliothumbnail.png";
+import recbaseThumbnail from "../assets/recbasethumbnail.png";
+import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
+import bpmbodyThumbnail from "../assets/bpmbodythumnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
 import developer3 from "../assets/developerportfolio3.png";
@@ -41,16 +53,17 @@ import developer6 from "../assets/developerportfolio6.png";
 type Project = {
   title: string;
   category: string;
-  group: "AI Projects" | "Web Development" | "All Projects";
+  groups: ("AI Projects" | "Web Development" | "All Projects")[];
   description: string;
   longDescription: string;
   image: string;
   images?: string[];
   previewUrl?: string;
   technologies: string[];
-  features: string[];
+  features: React.ReactNode[];
   demoUrl?: string;
   featured?: boolean;
+  statusBadge?: string;
 };
 
 const GROUPS = ["AI Projects", "Web Development", "All Projects"] as const;
@@ -63,37 +76,190 @@ export function ProjectsPage() {
       {
         title: t("projects.eduflow.title"),
         category: t("projects.eduflow.category"),
-        group: "AI Projects",
+        groups: ["AI Projects", "All Projects"],
         description: t("projects.eduflow.description"),
         longDescription: t("projects.eduflow.longDescription"),
         image: eduflowImage,
-        previewUrl: eduflow1,
+        previewUrl:
+          "https://drive.google.com/file/d/1U6ep0iBRkbUtYajc9teyqO6Y1gM95TKz/view?usp=sharing",
         images: [eduflow1, eduflow2, eduflow3, eduflow4],
         technologies: [
-          "AI Integration",
-          "Full-stack Development",
+          "Claude Sonnet",
+          "Figma",
+          "Make",
+          "Lovable",
+          "Bolt V2",
+          "Supabase",
           "React",
           "TypeScript",
-          "Supabase",
-          "APIs",
-          "Cursor",
-          "Bolt",
-          "Lovable",
+          "Tailwind CSS",
+          "Motion/React",
+          "Lucide Icons",
+          "Dialog Components",
         ],
-        features: t("projects.eduflow.features") as unknown as string[],
+        features: [
+          <>
+            <GripHorizontal className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[0]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[1]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[2]}
+          </>,
+          <>
+            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[3]}
+          </>,
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[4]}
+          </>,
+          <>
+            <Lock className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[5]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.eduflow.features")[6]}
+          </>,
+        ],
         demoUrl: "https://orges-i-eduflow-impo-e6c3.bolt.host/",
         featured: true,
       },
       {
-        title: "Developer Themed Portfolio Website",
-        category: "AI Projects | Portfolio",
-        group: "AI Projects",
-        description:
-          "A clean and modern developer themed portfolio website, fully vibecoded with Emergent. Showcases skills, projects, and contact info in a professional way.",
-        longDescription:
-          "Crafted with Emergent Agent and Claude Sonnet, this developer-themed portfolio delivers a polished experience that highlights personal brand, recent work, and contact pathways. The layout keeps content focused while maintaining a refined aesthetic suitable for client or employer presentations.",
+        title: t("projects.recbase.title"),
+        category: t("projects.recbase.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.recbase.description"),
+        longDescription: t("projects.recbase.longDescription"),
+        image: recbaseThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1ftrPytsDgL2AA57DEovazxKogEuuVfo8/view?usp=sharing",
+        images: [
+          "https://drive.google.com/file/d/1ftrPytsDgL2AA57DEovazxKogEuuVfo8/view?usp=sharing",
+        ],
+        technologies: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "Lovable",
+          "AI Integration",
+          "Boolean Search",
+          "Activity Tracking",
+        ],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[0]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[1]}
+          </>,
+          <>
+            <Lock className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[2]}
+          </>,
+        ],
+      },
+      {
+        title: t("projects.aerocommand.title"),
+        category: t("projects.aerocommand.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.aerocommand.description"),
+        longDescription: t("projects.aerocommand.longDescription"),
+        image: aerocommandImage,
+        previewUrl:
+          "https://drive.google.com/file/d/1iVuG9fw1C_0XLuQipTreXNSBcxMc7sCq/view?usp=sharing",
+        images: [aerocommandImage],
+        technologies: [
+          "Vite",
+          "TypeScript",
+          "React",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Supabase",
+          "Lovable",
+          "Claude Sonnet",
+        ],
+        features: [
+          <>
+            <GripHorizontal className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.aerocommand.features")[0]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.aerocommand.features")[1]}
+          </>,
+          <>
+            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.aerocommand.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.aerocommand.features")[3]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.aerocommand.features")[4]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
+      },
+      {
+        title: t("projects.bpmbody.title"),
+        category: t("projects.bpmbody.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.bpmbody.description"),
+        longDescription: t("projects.bpmbody.longDescription"),
+        image: bpmbodyThumbnail,
+        technologies: [
+          "Next.js 14",
+          "React",
+          "TailwindCSS",
+          "Radix UI",
+          "TypeScript",
+          "Vercel",
+          "V0",
+        ],
+        features: [
+          <>
+            <Code className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[0]}
+          </>,
+          <>
+            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[1]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[2]}
+          </>,
+          <>
+            <ImageIcon className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[3]}
+          </>,
+          <>
+            <MapPin className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[4]}
+          </>,
+        ],
+        demoUrl: "https://v0-bpmb-ody-whats-app-store.vercel.app/",
+      },
+      {
+        title: t("projects.developerThemed.title"),
+        category: t("projects.developerThemed.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.developerThemed.description"),
+        longDescription: t("projects.developerThemed.longDescription"),
         image: developerThumbnail,
-        previewUrl: developer1,
+        previewUrl:
+          "https://drive.google.com/file/d/1zvhoaIysPBLu8ZCsuYm0BXuhtN1pp1qH/view?usp=sharing",
         images: [
           developer1,
           developer2,
@@ -102,60 +268,64 @@ export function ProjectsPage() {
           developer5,
           developer6,
         ],
-        technologies: ["Emergent Agent", "Claude Sonnet"],
+        technologies: [
+          "Emergent Agent",
+          "Claude Sonnet",
+          "React",
+          "Tailwind CSS",
+          "shadcn/ui",
+        ],
         features: [
-          "Developer themed presentation",
-          "Project highlight sections",
-          "Integrated contact touchpoints",
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.developerThemed.features")[0]}
+          </>,
         ],
         demoUrl: "https://fisteku-dev.preview.emergentagent.com/",
       },
       {
-        title: t("projects.ecomm.title"),
-        category: t("projects.ecomm.category"),
-        group: "Web Development",
-        description: t("projects.ecomm.description"),
-        longDescription: t("projects.ecomm.longDescription"),
-        image:
-          "https://images.unsplash.com/photo-1472851294608-062f824d29cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        title: t("projects.pocketbalance.title"),
+        category: t("projects.pocketbalance.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.pocketbalance.description"),
+        longDescription: t("projects.pocketbalance.longDescription"),
+        image: pocketbalanceThumbnail,
         previewUrl:
-          "https://images.unsplash.com/photo-1557825835-a5267448a13c?auto=format&fit=crop&w=1600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1557825835-a5267448a13c?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-        ],
+          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
+        images: ["https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view"],
         technologies: [
-          "Shopify Liquid",
-          "JavaScript",
-          "CSS3",
-          "HTML5",
-          "Google Ads API",
-          "Product Research Tools",
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Firebase",
+          "Tailwind CSS",
+          "ShadCN UI",
+          "Google Gemini",
+          "Genkit",
         ],
-        features: t("projects.ecomm.features") as unknown as string[],
-      },
-      {
-        title: t("projects.portfolio.title"),
-        category: t("projects.portfolio.category"),
-        group: "Web Development",
-        description: t("projects.portfolio.description"),
-        longDescription: t("projects.portfolio.longDescription"),
-        image:
-          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        previewUrl:
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[0]}
+          </>,
+          <>
+            <Code className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[1]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[3]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[4]}
+          </>,
         ],
-        technologies: [
-          "HTML5",
-          "CSS3",
-          "JavaScript",
-          "Bootstrap",
-          "jQuery",
-          "Responsive Design",
-        ],
-        features: t("projects.portfolio.features") as unknown as string[],
+        statusBadge: t("projects.inProcess"),
       },
     ],
     [t]
@@ -180,7 +350,7 @@ export function ProjectsPage() {
   const projectsToDisplay =
     activeGroup === "All Projects"
       ? projects
-      : projects.filter((project) => project.group === activeGroup);
+      : projects.filter((project) => project.groups.includes(activeGroup));
 
   const openDetails = (project: Project) => {
     setActiveProject(project);
@@ -247,10 +417,19 @@ export function ProjectsPage() {
                         whileHover={{ scale: 1.08 }}
                         transition={{ duration: 0.3 }}
                       />
-                      {project.featured && (
-                        <Badge className="absolute right-4 top-4 bg-primary text-primary-foreground">
-                          {t("certifications.featured")}
-                        </Badge>
+                      {(project.featured || project.statusBadge) && (
+                        <div className="absolute right-4 top-4 flex flex-col items-end gap-2">
+                          {project.featured && (
+                            <Badge className="bg-primary text-primary-foreground">
+                              {t("certifications.featured")}
+                            </Badge>
+                          )}
+                          {project.statusBadge && (
+                            <Badge className="bg-secondary text-secondary-foreground border border-primary/20 shadow">
+                              {project.statusBadge}
+                            </Badge>
+                          )}
+                        </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     </div>
@@ -302,18 +481,14 @@ export function ProjectsPage() {
                             .map((feature, featureIndex) => (
                               <motion.li
                                 key={`${project.title}-feature-${featureIndex}`}
-                                className="flex items-start gap-2 text-muted-foreground"
+                                className="flex items-center gap-2 text-muted-foreground"
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{
                                   delay: 0.4 + featureIndex * 0.05,
                                 }}
                               >
-                                <span
-                                  className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"
-                                  aria-hidden="true"
-                                />
-                                <span>{feature}</span>
+                                {feature}
                               </motion.li>
                             ))}
                         </ul>
@@ -342,13 +517,13 @@ export function ProjectsPage() {
                               href={project.previewUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              onClick={(event) => event.stopPropagation()}
-                            >
-                              <ImageIcon size={16} />
-                              Preview Images
-                            </a>
-                          </Button>
-                        )}
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <ImageIcon size={16} />
+                            {t("projects.previewImages")}
+                          </a>
+                        </Button>
+                      )}
                       </div>
                     </CardContent>
                   </div>
