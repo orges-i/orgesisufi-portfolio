@@ -23,15 +23,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
-import { createPortal } from "react-dom";
-import { useEffect, useMemo, useState, type MouseEvent } from "react";
+import { useMemo, useState } from "react";
 import { cn } from "./ui/utils";
 import eduflowImage from "../assets/eduflowprojectshowcase.png";
 import eduflow1 from "../assets/eduflow1.png";
@@ -54,6 +46,7 @@ type Project = {
   longDescription: string;
   image: string;
   images?: string[];
+  previewUrl?: string;
   technologies: string[];
   features: string[];
   demoUrl?: string;
@@ -61,72 +54,6 @@ type Project = {
 };
 
 const GROUPS = ["AI Projects", "Web Development", "All Projects"] as const;
-
-function PreviewModal({
-  project,
-  open,
-  onClose,
-}: {
-  project: Project | null;
-  open: boolean;
-  onClose: () => void;
-}) {
-  useEffect(() => {
-    if (!open) {
-      return;
-    }
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = previous;
-    };
-  }, [open]);
-
-  if (!open || !project || !project.images || project.images.length === 0) {
-    return null;
-  }
-
-  const modal = (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl border bg-background shadow-2xl">
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute right-4 top-4 inline-flex size-9 items-center justify-center rounded-full bg-black/30 text-white transition hover:bg-black/50"
-          aria-label="Close preview"
-        >
-          X
-        </button>
-        <div className="border-b px-6 py-4">
-          <h3 className="text-lg font-semibold text-foreground">
-            {project.title} â€” Preview
-          </h3>
-        </div>
-        <div className="px-6 py-6">
-          <Carousel className="relative w-full">
-            <CarouselContent>
-              {project.images.map((src, index) => (
-                <CarouselItem key={`${project.title}-image-${index}`}>
-                  <div className="aspect-video w-full overflow-hidden rounded-lg border">
-                    <img
-                      src={src}
-                      alt={`${project.title} slide ${index + 1}`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
-          </Carousel>
-        </div>
-      </div>
-    </div>
-  );
-
-  return createPortal(modal, document.body);
-}
 
 export function ProjectsPage() {
   const { t } = useLanguage();
@@ -140,6 +67,7 @@ export function ProjectsPage() {
         description: t("projects.eduflow.description"),
         longDescription: t("projects.eduflow.longDescription"),
         image: eduflowImage,
+        previewUrl: eduflow1,
         images: [eduflow1, eduflow2, eduflow3, eduflow4],
         technologies: [
           "AI Integration",
@@ -165,6 +93,7 @@ export function ProjectsPage() {
         longDescription:
           "Crafted with Emergent Agent and Claude Sonnet, this developer-themed portfolio delivers a polished experience that highlights personal brand, recent work, and contact pathways. The layout keeps content focused while maintaining a refined aesthetic suitable for client or employer presentations.",
         image: developerThumbnail,
+        previewUrl: developer1,
         images: [
           developer1,
           developer2,
@@ -189,6 +118,8 @@ export function ProjectsPage() {
         longDescription: t("projects.ecomm.longDescription"),
         image:
           "https://images.unsplash.com/photo-1472851294608-062f824d29cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        previewUrl:
+          "https://images.unsplash.com/photo-1557825835-a5267448a13c?auto=format&fit=crop&w=1600&q=80",
         images: [
           "https://images.unsplash.com/photo-1557825835-a5267448a13c?auto=format&fit=crop&w=1600&q=80",
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
@@ -211,6 +142,8 @@ export function ProjectsPage() {
         longDescription: t("projects.portfolio.longDescription"),
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        previewUrl:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
         images: [
           "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
         ],
@@ -238,7 +171,6 @@ export function ProjectsPage() {
     return <Code className="text-primary" size={20} />;
   };
 
-  const [previewOpen, setPreviewOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [activeGroup, setActiveGroup] = useState<(typeof GROUPS)[number]>(
@@ -249,12 +181,6 @@ export function ProjectsPage() {
     activeGroup === "All Projects"
       ? projects
       : projects.filter((project) => project.group === activeGroup);
-
-  const openPreview = (project: Project, event?: MouseEvent) => {
-    event?.stopPropagation();
-    setActiveProject(project);
-    setPreviewOpen(true);
-  };
 
   const openDetails = (project: Project) => {
     setActiveProject(project);
@@ -406,16 +332,21 @@ export function ProjectsPage() {
                             <ExternalLink size={16} />
                           </a>
                         )}
-                        {project.images && project.images.length > 0 && (
+                        {project.previewUrl && (
                           <Button
+                            asChild
                             variant="outline"
                             className="inline-flex items-center gap-2"
-                            onClick={(event: MouseEvent) =>
-                              openPreview(project, event)
-                            }
                           >
-                            <ImageIcon size={16} />
-                            Preview Images
+                            <a
+                              href={project.previewUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <ImageIcon size={16} />
+                              Preview Images
+                            </a>
                           </Button>
                         )}
                       </div>
@@ -427,21 +358,11 @@ export function ProjectsPage() {
           ))}
         </div>
 
-        <PreviewModal
-          project={activeProject}
-          open={previewOpen}
-          onClose={() => {
-            setPreviewOpen(false);
-            if (!detailsOpen) {
-              setActiveProject(null);
-            }
-          }}
-        />
         <Dialog
           open={detailsOpen}
           onOpenChange={(open: boolean) => {
             setDetailsOpen(open);
-            if (!open && !previewOpen) {
+            if (!open) {
               setActiveProject(null);
             }
           }}
