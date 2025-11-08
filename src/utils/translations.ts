@@ -141,7 +141,7 @@ export const translations = {
         title: "Eduflow - Course Creation Platform",
         category: "SaaS / AI Integration",
         description:
-          "A full-stack course creation platform that lets users easily build, publish, and share courses. Prototyped with Figma, Make, and Lovable, and fully developed and deployed with Bolt V2.",
+          "A full-stack course creation platform that lets users easily build, publish, and share courses. Prototyped with Figma Make and Lovable, and fully developed and deployed with Bolt V2.",
         longDescription:
           "EduFlow streamlines course creation, allowing authors to focus on content rather than technology. Its intuitive interface and modern tech stack ensure quick course setup, easy updates, and professional presentation.",
         features: [
@@ -199,7 +199,7 @@ export const translations = {
         description:
           "A professional web app for drone engineers and UAV operators to model battery consumption, flight time, and efficiency with precision.",
         longDescription:
-          "Designed and prototyped with Figma and Make, this client-side analyzer blends advanced mathematical models with environmental factors like wind, altitude, and temperature to deliver private, real-time predictions for mission planning.",
+          "Designed and prototyped with Figma Make, this client-side analyzer blends advanced mathematical models with environmental factors like wind, altitude, and temperature to deliver private, real-time predictions for mission planning.",
         features: [
           "iOS-style glassmorphic UI with frosted layers and smooth animations",
           "Real-time calculations for battery usage, flight time, and efficiency",
@@ -222,6 +222,21 @@ export const translations = {
           "Studio location & hours with Google Maps",
         ],
       },
+      droneCamera: {
+        title: "Drone Camera Placement & Payload Effects Prototype",
+        category: "AI Projects | Simulation Prototype",
+        description:
+          "Prototyped with Figma Make, this app tests drone camera placement and payload effects, visualizes coverage, simulates environments, and provides performance insights.",
+        longDescription:
+          "This browser-based prototype helps drone engineers experiment with camera offsets, payload packages, and mission constraints. It renders live coverage footprints, blind-spot warnings, and environment simulations while tracking time, speed, distance, altitude, and energy usage for better planning.",
+        features: [
+          "Test camera placement & payload effects",
+          "Live coverage radius & area visualization",
+          "Flight performance insights (time, speed, distance, altitude)",
+          "Environment simulator & blind-spot analysis",
+          "Save & manage drone configurations",
+        ],
+      },
       developerThemed: {
         title: "Developer Themed Portfolio Website",
         category: "AI Projects | Web Development",
@@ -230,6 +245,20 @@ export const translations = {
         longDescription:
           "Crafted with Emergent Agent and Claude Sonnet, this developer-themed portfolio delivers a polished experience that highlights personal brand, recent work, and contact pathways. The layout keeps content focused while maintaining a refined aesthetic suitable for client or employer presentations.",
         features: ["Developer themed presentation"],
+      },
+      akCarShop: {
+        title: "AK CAR SHOP AG — Modern Automotive Concept Website",
+        category: "AI Projects | Web Development",
+        description:
+          "A modern and clean website designed for AK CAR SHOP AG, built to showcase vehicles and services to customers in Switzerland. The prototype/foundationo was created using Figma Make and was then developed and finalized using Bolt, resulting in a fast, responsive, and premium user experience tailored for an automotive brand.",
+        longDescription:
+          "It highlights vehicle offerings, key services, and streamlined interactions, providing visitors with an intuitive and engaging browsing experience.",
+        features: [
+          "Branded UI tailored to the automotive identity",
+          "Vehicle listings featuring imagery, specs, and pricing",
+          "Detail pages with carousel galleries and quick inquiry CTA",
+          "Smooth premium animations for a high-end presentation",
+        ],
       },
       pocketbalance: {
         title: "PocketBalance: AI-Powered Personal Finance Manager",
@@ -244,6 +273,50 @@ export const translations = {
           "Effortless Transaction Logging and Categorization",
           "Visual Reports with Interactive Charts",
           "Fully Responsive Design for All Devices",
+        ],
+      },
+      zvrich: {
+        title: "Zvrich | Kids Fashion E-Commerce Frontend UI Makeover Prototype",
+        category: "AI Projects | Web Development",
+        description:
+          "A UI front-end makeover for ZVRICH GmbH, a Swiss kidswear store. Designed around the client brand with polished visuals, responsive layouts, and a mobile-first shopping experience.",
+        longDescription:
+          "Built in Lovable with React 18, Vite, and Tailwind CSS, this prototype refresh keeps the playful Swiss identity while tightening layout rhythm, navigation, and accessibility across Home, Shop, Product, and Contact flows.",
+        features: [
+          "Branded, client-specific interface for the ZVRICH kidswear line",
+          "Responsive layout optimized for desktop, tablet, and mobile",
+          "Best web practices for UX, semantics, and accessibility",
+          "Focused prototype covering Home, Shop, Product, and Contact pages",
+        ],
+      },
+      plantly: {
+        title: "Plantly – AI Plant Identifier (iOS-Focused App)",
+        category: "AI Projects | Mobile",
+        description:
+          "An AI-powered plant identification experiment built while trying out Rork + Expo for iOS. Snap a plant photo to get instant identification, save it, and receive care guidance through a smooth, camera-first UI.",
+        longDescription:
+          "This prototype focuses on camera capture and iOS-optimized interactions while experimenting with Rork's Expo workflow, Zustand state, and React Query data layers. It delivers fast plant recognition, detailed care guidance, and collection management, with Android/Web support planned after the iOS experience is finalized.",
+        features: [
+          "AI-powered plant recognition using the device camera",
+          "Focused UI & UX tuned for iOS gestures, typography, and motion",
+          "Instant care details, descriptions, and save-to-collection workflows",
+          "Cross-platform foundation that still prioritizes iOS polish",
+        ],
+      },
+      flow: {
+        title: "Flow – AI Resume Builder",
+        category: "AI Projects | Mobile",
+        description:
+          "An AI-powered resume builder experiment created while trying Vibecode + Expo for iOS. Craft a CV with a clean UI, get AI suggestions on structure and wording, and download the polished result right from the app.",
+        longDescription:
+          "Flow pairs Vibecode's Expo stack with React Native, Zustand, and React Query to create a mobile-first resume experience. Users can edit sections inline, receive AI feedback, autosave drafts locally, and export finished resumes, all while the interface stays tuned for iOS performance with experimental Web/Android parity.",
+        features: [
+          "Create and customize resumes directly on mobile",
+          "AI-powered feedback and improvement suggestions",
+          "Clean, minimal UI optimized for iOS",
+          "Export and download the final resume file",
+          "Autosave drafts with local storage persistence",
+          "Designed for iOS first with experimental Web & Android support",
         ],
       },
     },
@@ -484,7 +557,7 @@ export const translations = {
         description:
           "Një aplikacion profesional për inxhinierët e dronëve dhe operatorët e UAV-ve për të modeluar me saktësi konsumimin e baterisë, kohën e fluturimit dhe efikasitetin.",
         longDescription:
-          "I dizajnuar dhe prototipuar me Figma dhe Make, ky analizues në anën e klientit kombinon modele të avancuara matematikore me faktorë mjedisorë si era, lartësia dhe temperatura për të ofruar parashikime të sakta në kohë reale duke i mbajtur të dhënat plotësisht lokale.",
+          "I dizajnuar dhe prototipuar me Figma Make, ky analizues në anën e klientit kombinon modele të avancuara matematikore me faktorë mjedisorë si era, lartësia dhe temperatura për të ofruar parashikime të sakta në kohë reale duke i mbajtur të dhënat plotësisht lokale.",
         features: [
           "UI me stil iOS me efekte xhami të turbullta dhe animacione të lëmuara",
           "Llogaritje në kohë reale për kohën e fluturimit, energjinë dhe efikasitetin",
@@ -507,6 +580,21 @@ export const translations = {
           "Vendndodhja e studios dhe orari me Google Maps",
         ],
       },
+      droneCamera: {
+        title: "Prototip i Vendosjes së Kamerës së Dronit dhe Efekteve të Ngarkesës",
+        category: "Projekte AI | Prototip Simulimi",
+        description:
+          "I prototipuar me Figma Make, ky aplikacion teston vendosjen e kamerës së dronit dhe efektet e ngarkesës, vizualizon mbulimin, simulon mjedise dhe ofron analiza performance.",
+        longDescription:
+          "Ky prototip në shfletues ndihmon ekipet e dronëve të eksperimentojnë me pozicionet e kamerës, peshat e ngarkesës dhe kufizimet e misionit. Ai shfaq në kohë reale rrezet e mbulimit, paralajmërimet për zonat e verbra dhe simulimet mjedisore ndërsa gjurmon kohën, shpejtësinë, distancën, lartësinë dhe konsumimin e energjisë për planifikim më të mirë.",
+        features: [
+          "Teston vendosjen e kamerës dhe efektet e ngarkesës",
+          "Vizualizim live i rrezes dhe zonës së mbulimit",
+          "Analiza performance për kohë, shpejtësi, distancë dhe lartësi",
+          "Simulator mjedisi dhe analizë e pikave të verbra",
+          "Ruajtje dhe menaxhim i konfigurimeve të dronit",
+        ],
+      },
       developerThemed: {
         title: "Portfolio me Temë Zhvilluesi",
         category: "Projekte AI | Zhvillim Web",
@@ -515,6 +603,20 @@ export const translations = {
         longDescription:
           "Ndërtuar me Emergent Agent dhe Claude Sonnet, kjo portfolio me temë zhvilluesi ofron një përvojë të rafinuar që nxjerr në pah markën personale, projektet kryesore dhe kanalet e kontaktit. Struktura mban fokusin te përmbajtja duke ruajtur estetikën elegante të përshtatshme për klientë ose punëdhënës.",
         features: ["Prezantim me temë zhvilluesi"],
+      },
+      akCarShop: {
+        title: "AK CAR SHOP AG — Faqe Moderne Automobilistike",
+        category: "Projekte AI | Zhvillim Web",
+        description:
+          "Një faqe moderne dhe e pastër për AK CAR SHOP AG në Zvicër. Prototipuar me Figma Make dhe përfunduar me Bolt për të ofruar një përvojë premium, të shpejtë dhe responsive për prezantimin e automjeteve dhe shërbimeve.",
+        longDescription:
+          "Ajo vë në pah ofertat e automjeteve, shërbimet kryesore dhe ndërveprimet e thjeshtuara, duke u ofruar vizitorëve një përvojë intuitive dhe angazhuese shfletimi.",
+        features: [
+          "UI e personalizuar sipas identitetit automobilistik",
+          "Lista automjetesh me imazhe, specifika dhe çmime",
+          "Faqe detajesh me karusel imazhesh dhe CTA për kontakt të shpejtë",
+          "Animacione të buta premium për një prezantim të nivelit të lartë",
+        ],
       },
       pocketbalance: {
         title: "PocketBalance: Menaxheri i Financave Personale me AI",
@@ -529,6 +631,50 @@ export const translations = {
           "Regjistrim dhe Kategorizim i Lehtë i Transaksioneve",
           "Raporte Vizuale me Grafikë Interaktivë",
           "Dizajn Plotësisht i Përgjigjshëm për të Gjitha Pajisjet",
+        ],
+      },
+      zvrich: {
+        title: "Zvrich | Prototip UI për Kids Fashion E-Commerce",
+        category: "Projekte AI | Zhvillim Web",
+        description:
+          "Një rifreskim UI për ZVRICH GmbH, dyqan zviceran për veshje fëmijësh, i ndërtuar sipas identitetit të klientit me vizualë të pastër dhe përvojë elegante mobile.",
+        longDescription:
+          "Prototip i krijuar me Lovable, React 18, Vite dhe Tailwind CSS që ruan identitetin premium të Zvrich duke përmirësuar navigimin, ritmin e layout-it dhe aksesueshmërinë në faqet Home, Shop, Product dhe Contact.",
+        features: [
+          "UI i personalizuar sipas markës së modës për fëmijë",
+          "Layout plotësisht responsive për desktop dhe mobile",
+          "Praktika më të mira UX me fokus në semantikë dhe aksesueshmëri",
+          "Prototip i thjeshtë që mbulon faqet Home, Shop, Product, Contact",
+        ],
+      },
+      plantly: {
+        title: "Plantly – Identifikues Bimësh me AI (i fokusuar në iOS)",
+        category: "Projekte AI | Mobile",
+        description:
+          "Një eksperiment identifikimi bimësh me AI ndërsa testohet Rork + Expo për iOS. Bëni një foto të bimës për ta identifikuar menjëherë, për ta ruajtur dhe për të marrë këshilla kujdesi përmes një UI të butë të fokusuar te kamera.",
+        longDescription:
+          "Ky prototip përqendrohet në kapjen nga kamera dhe ndërveprimet e optimizuara për iOS duke testuar rrjedhën e Rork me Expo, Zustand dhe React Query. Ofron njohje të shpejtë të bimëve, udhëzime të detajuara për kujdesin dhe menaxhim koleksionesh, ndërkohë që planifikohet mbështetja për Android/Web pas përfundimit të përvojës në iOS.",
+        features: [
+          "Identifikim bimësh i fuqizuar nga AI nga kamera",
+          "UI/UX e fokusuar në pajisjet iOS me performancë të optimizuar",
+          "Informacione dhe rekomandime të menjëhershme për kujdesin e bimëve",
+          "Mbështetje për Web & Android, me fokus kryesor iOS",
+        ],
+      },
+      flow: {
+        title: "Flow – Ndërtues CV me AI",
+        category: "Projekte AI | Mobile",
+        description:
+          "Një eksperiment për ndërtimin e CV-ve me AI i krijuar gjatë testimit të Vibecode + Expo për iOS. Krijo një CV me UI të pastër, merr sugjerime nga AI për strukturën dhe formulimin, dhe shkarko versionin final direkt nga aplikacioni.",
+        longDescription:
+          "Flow kombinon Vibecode, React Native, Zustand dhe React Query për të ofruar një përvojë mobile-first. Përdoruesit mund të editojnë seksionet në mënyrë dinamike, të marrin komente nga AI, të ruajnë draftet lokalisht dhe të eksportojnë CV-të, me përparësi për performancën në iOS dhe mbështetje eksperimentale për Web/Android.",
+        features: [
+          "Krijo dhe personalizo CV-të direkt në mobile",
+          "Sugjerime dhe feedback nga AI për përmirësime",
+          "UI minimaliste dhe e pastër e optimizuar për iOS",
+          "Eksportim dhe shkarkim i CV-së finale",
+          "Autosave dhe ruajtje lokale për draftet",
+          "Projektuar për iOS fillimisht, me mbështetje eksperimentale për Web & Android",
         ],
       },
     },

@@ -13,6 +13,13 @@ import {
   Database,
   MapPin,
   Gauge,
+  Camera,
+  Radar,
+  Layers,
+  Leaf,
+  Globe,
+  Download,
+  Save,
 } from "lucide-react";
 import {
   Card,
@@ -44,6 +51,11 @@ import developerThumbnail from "../assets/developerportfoliothumbnail.png";
 import recbaseThumbnail from "../assets/recbasethumbnail.png";
 import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
 import bpmbodyThumbnail from "../assets/bpmbodythumnail.png";
+import droneCameraThumbnail from "../assets/dronecamerathumbnail.png";
+import zvrichThumbnail from "../assets/zvrichthumbnail.png";
+import plantlyThumbnail from "../assets/plantlythumbnail.png";
+import flowThumbnail from "../assets/flowthumbnail.png";
+import akCarShopThumbnail from "../assets/carshopthumbnail.png";
 import uavThumbnail from "../assets/uavthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
@@ -87,8 +99,7 @@ export function ProjectsPage() {
         images: [eduflow1, eduflow2, eduflow3, eduflow4],
         technologies: [
           "Claude Sonnet",
-          "Figma",
-          "Make",
+          "Figma Make",
           "Lovable",
           "Bolt V2",
           "Supabase",
@@ -294,6 +305,99 @@ export function ProjectsPage() {
         demoUrl: "https://v0-bpmb-ody-whats-app-store.vercel.app/",
       },
       {
+        title: t("projects.droneCamera.title"),
+        category: t("projects.droneCamera.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.droneCamera.description"),
+        longDescription: t("projects.droneCamera.longDescription"),
+        image: droneCameraThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1wfwLfJyEAv_0BSr9_fSzbRpwZDdYrOSJ/view?usp=sharing",
+        images: [droneCameraThumbnail],
+        technologies: [
+          "Figma Make",
+          "React 18",
+          "TypeScript",
+          "Vite",
+          "Tailwind-style utility classes",
+          "Radix UI",
+          "Lucide icons",
+          "Sonner toasts",
+          "React Hook Form",
+          "Embla carousel utilities",
+        ],
+        features: [
+          <>
+            <Camera className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.droneCamera.features")[0]}
+          </>,
+          <>
+            <Radar className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.droneCamera.features")[1]}
+          </>,
+          <>
+            <Gauge className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.droneCamera.features")[2]}
+          </>,
+          <>
+            <Layers className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.droneCamera.features")[3]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.droneCamera.features")[4]}
+          </>,
+        ],
+        demoUrl: "https://drone-camera-placement-prototype.vercel.app/",
+        statusBadge: t("projects.inProcess"),
+      },
+      {
+        title: t("projects.pocketbalance.title"),
+        category: t("projects.pocketbalance.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.pocketbalance.description"),
+        longDescription: t("projects.pocketbalance.longDescription"),
+        image: pocketbalanceThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
+        images: [
+          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
+        ],
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Firebase",
+          "Tailwind CSS",
+          "ShadCN UI",
+          "Google Gemini",
+          "Genkit",
+        ],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[0]}
+          </>,
+          <>
+            <Code className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[1]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[3]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[4]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
+      },
+      {
         title: t("projects.developerThemed.title"),
         category: t("projects.developerThemed.category"),
         groups: ["AI Projects", "Web Development", "All Projects"],
@@ -326,45 +430,164 @@ export function ProjectsPage() {
         demoUrl: "https://fisteku-dev.preview.emergentagent.com/",
       },
       {
-        title: t("projects.pocketbalance.title"),
-        category: t("projects.pocketbalance.category"),
-        groups: ["AI Projects", "All Projects"],
-        description: t("projects.pocketbalance.description"),
-        longDescription: t("projects.pocketbalance.longDescription"),
-        image: pocketbalanceThumbnail,
-        previewUrl:
-          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
-        images: ["https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view"],
+        title: t("projects.akCarShop.title"),
+        category: t("projects.akCarShop.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.akCarShop.description"),
+        longDescription: t("projects.akCarShop.longDescription"),
+        image: akCarShopThumbnail,
         technologies: [
-          "Next.js",
+          "Figma Make",
+          "Bolt",
           "React",
-          "TypeScript",
-          "Firebase",
+          "Vite",
           "Tailwind CSS",
-          "ShadCN UI",
-          "Google Gemini",
-          "Genkit",
+          "Radix UI",
+          "shadcn/ui",
+          "Embla Carousel",
+          "Framer Motion",
         ],
         features: [
           <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[0]}
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[0]}
           </>,
           <>
-            <Code className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[1]}
-          </>,
-          <>
-            <Database className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[2]}
+            <ImageIcon className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[1]}
           </>,
           <>
             <FileText className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[3]}
+            {t("projects.akCarShop.features")[2]}
+          </>,
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[3]}
+          </>,
+        ],
+        demoUrl: "https://ak-car-shop-ag-proto-fal9.bolt.host/",
+      },
+      {
+        title: t("projects.zvrich.title"),
+        category: t("projects.zvrich.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.zvrich.description"),
+        longDescription: t("projects.zvrich.longDescription"),
+        image: zvrichThumbnail,
+        images: [zvrichThumbnail],
+        technologies: [
+          "Lovable",
+          "React 18",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "React Router DOM",
+        ],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[0]}
           </>,
           <>
             <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[4]}
+            {t("projects.zvrich.features")[1]}
+          </>,
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[3]}
+          </>,
+        ],
+        demoUrl: "https://orges-i.github.io/zvrich-ecommerce/",
+      },
+      {
+        title: t("projects.plantly.title"),
+        category: t("projects.plantly.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.plantly.description"),
+        longDescription: t("projects.plantly.longDescription"),
+        image: plantlyThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1Vpq8Aisiy4gYyoYzgW5SsCp0JZyw0l7D/view?usp=sharing",
+        images: [plantlyThumbnail],
+        technologies: [
+          "Rork + Expo",
+          "React Native",
+          "Expo Router",
+          "TypeScript",
+          "Zustand",
+          "React Query",
+          "NativeWind",
+          "Expo Camera",
+          "Expo Image Picker",
+          "Expo File System",
+          "Location APIs",
+        ],
+        features: [
+          <>
+            <Camera className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.plantly.features")[0]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.plantly.features")[1]}
+          </>,
+          <>
+            <Leaf className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.plantly.features")[2]}
+          </>,
+          <>
+            <Globe className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.plantly.features")[3]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
+      },
+      {
+        title: t("projects.flow.title"),
+        category: t("projects.flow.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.flow.description"),
+        longDescription: t("projects.flow.longDescription"),
+        image: flowThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1lGuNv2WV8t93fbHxDaAmuKFFPkF1EK-z/view?usp=sharing",
+        images: [flowThumbnail],
+        technologies: [
+          "Vibecode + Expo",
+          "React Native",
+          "Expo Router",
+          "TypeScript",
+          "Zustand",
+          "React Query",
+        ],
+        features: [
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[0]}
+          </>,
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[1]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[2]}
+          </>,
+          <>
+            <Download className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[3]}
+          </>,
+          <>
+            <Save className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[4]}
+          </>,
+          <>
+            <Globe className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.flow.features")[5]}
           </>,
         ],
         statusBadge: t("projects.inProcess"),
@@ -445,9 +668,6 @@ export function ProjectsPage() {
                     ? "border-2 border-primary"
                     : "border-primary/20"
                 )}
-                role="button"
-                tabIndex={0}
-                onClick={() => openDetails(project)}
               >
                 <div className="grid gap-6 md:grid-cols-5">
                   <div className="md:col-span-2">
@@ -559,13 +779,13 @@ export function ProjectsPage() {
                               href={project.previewUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                            onClick={(event) => event.stopPropagation()}
-                          >
-                            <ImageIcon size={16} />
-                            {t("projects.previewImages")}
-                          </a>
-                        </Button>
-                      )}
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <ImageIcon size={16} />
+                              {t("projects.previewImages")}
+                            </a>
+                          </Button>
+                        )}
                       </div>
                     </CardContent>
                   </div>
