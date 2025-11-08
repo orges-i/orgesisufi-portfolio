@@ -32,13 +32,6 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
 import { useMemo, useState } from "react";
 import { cn } from "./ui/utils";
 import eduflowImage from "../assets/eduflowprojectshowcase.png";
@@ -143,6 +136,7 @@ export function ProjectsPage() {
         demoUrl: "https://orges-i-eduflow-impo-e6c3.bolt.host/",
         featured: true,
       },
+
       {
         title: t("projects.recbase.title"),
         category: t("projects.recbase.category"),
@@ -180,6 +174,7 @@ export function ProjectsPage() {
           </>,
         ],
       },
+
       {
         title: t("projects.uavAnalyzer.title"),
         category: t("projects.uavAnalyzer.category"),
@@ -220,6 +215,48 @@ export function ProjectsPage() {
           </>,
         ],
       },
+
+      {
+        title: t("projects.bpmbody.title"),
+        category: t("projects.bpmbody.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.bpmbody.description"),
+        longDescription: t("projects.bpmbody.longDescription"),
+        image: bpmbodyThumbnail,
+        technologies: [
+          "Next.js 14",
+          "React",
+          "TailwindCSS",
+          "Radix UI",
+          "TypeScript",
+          "Vercel",
+          "V0",
+        ],
+        features: [
+          <>
+            <Code className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[0]}
+          </>,
+          <>
+            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[1]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[2]}
+          </>,
+          <>
+            <ImageIcon className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[3]}
+          </>,
+          <>
+            <MapPin className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.bpmbody.features")[4]}
+          </>,
+        ],
+        demoUrl: "https://v0-bpmb-ody-whats-app-store.vercel.app/",
+      },
+
       {
         title: t("projects.aerocommand.title"),
         category: t("projects.aerocommand.category"),
@@ -264,46 +301,130 @@ export function ProjectsPage() {
         ],
         statusBadge: t("projects.inProcess"),
       },
+
       {
-        title: t("projects.bpmbody.title"),
-        category: t("projects.bpmbody.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
-        description: t("projects.bpmbody.description"),
-        longDescription: t("projects.bpmbody.longDescription"),
-        image: bpmbodyThumbnail,
+        title: t("projects.pocketbalance.title"),
+        category: t("projects.pocketbalance.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.pocketbalance.description"),
+        longDescription: t("projects.pocketbalance.longDescription"),
+        image: pocketbalanceThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
+        images: [
+          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
+        ],
         technologies: [
-          "Next.js 14",
+          "Next.js",
           "React",
-          "TailwindCSS",
-          "Radix UI",
           "TypeScript",
-          "Vercel",
-          "V0",
+          "Firebase",
+          "Tailwind CSS",
+          "ShadCN UI",
+          "Google Gemini",
+          "Genkit",
         ],
         features: [
           <>
-            <Code className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.bpmbody.features")[0]}
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[0]}
           </>,
           <>
-            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.bpmbody.features")[1]}
+            <Code className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[1]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.pocketbalance.features")[3]}
           </>,
           <>
             <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.bpmbody.features")[2]}
+            {t("projects.pocketbalance.features")[4]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
+      },
+
+      {
+        title: t("projects.zvrich.title"),
+        category: t("projects.zvrich.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.zvrich.description"),
+        longDescription: t("projects.zvrich.longDescription"),
+        image: zvrichThumbnail,
+        images: [zvrichThumbnail],
+        technologies: [
+          "Lovable",
+          "React 18",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "React Router DOM",
+        ],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[0]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[1]}
+          </>,
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.zvrich.features")[3]}
+          </>,
+        ],
+        demoUrl: "https://orges-i.github.io/zvrich-ecommerce/",
+      },
+
+      {
+        title: t("projects.akCarShop.title"),
+        category: t("projects.akCarShop.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.akCarShop.description"),
+        longDescription: t("projects.akCarShop.longDescription"),
+        image: akCarShopThumbnail,
+        technologies: [
+          "Figma Make",
+          "Bolt",
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Radix UI",
+          "shadcn/ui",
+          "Embla Carousel",
+          "Framer Motion",
+        ],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[0]}
           </>,
           <>
             <ImageIcon className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.bpmbody.features")[3]}
+            {t("projects.akCarShop.features")[1]}
           </>,
           <>
-            <MapPin className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.bpmbody.features")[4]}
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[2]}
+          </>,
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.akCarShop.features")[3]}
           </>,
         ],
-        demoUrl: "https://v0-bpmb-ody-whats-app-store.vercel.app/",
+        demoUrl: "https://ak-car-shop-ag-proto-fal9.bolt.host/",
       },
+
       {
         title: t("projects.droneCamera.title"),
         category: t("projects.droneCamera.category"),
@@ -351,52 +472,7 @@ export function ProjectsPage() {
         demoUrl: "https://drone-camera-placement-prototype.vercel.app/",
         statusBadge: t("projects.inProcess"),
       },
-      {
-        title: t("projects.pocketbalance.title"),
-        category: t("projects.pocketbalance.category"),
-        groups: ["AI Projects", "All Projects"],
-        description: t("projects.pocketbalance.description"),
-        longDescription: t("projects.pocketbalance.longDescription"),
-        image: pocketbalanceThumbnail,
-        previewUrl:
-          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
-        images: [
-          "https://drive.google.com/file/d/1OB_4QxB42iPXoyWQshgkXdJnd6cQD6ft/view",
-        ],
-        technologies: [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Firebase",
-          "Tailwind CSS",
-          "ShadCN UI",
-          "Google Gemini",
-          "Genkit",
-        ],
-        features: [
-          <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[0]}
-          </>,
-          <>
-            <Code className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[1]}
-          </>,
-          <>
-            <Database className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[2]}
-          </>,
-          <>
-            <FileText className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[3]}
-          </>,
-          <>
-            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.pocketbalance.features")[4]}
-          </>,
-        ],
-        statusBadge: t("projects.inProcess"),
-      },
+
       {
         title: t("projects.developerThemed.title"),
         category: t("projects.developerThemed.category"),
@@ -429,84 +505,11 @@ export function ProjectsPage() {
         ],
         demoUrl: "https://fisteku-dev.preview.emergentagent.com/",
       },
-      {
-        title: t("projects.akCarShop.title"),
-        category: t("projects.akCarShop.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
-        description: t("projects.akCarShop.description"),
-        longDescription: t("projects.akCarShop.longDescription"),
-        image: akCarShopThumbnail,
-        technologies: [
-          "Figma Make",
-          "Bolt",
-          "React",
-          "Vite",
-          "Tailwind CSS",
-          "Radix UI",
-          "shadcn/ui",
-          "Embla Carousel",
-          "Framer Motion",
-        ],
-        features: [
-          <>
-            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.akCarShop.features")[0]}
-          </>,
-          <>
-            <ImageIcon className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.akCarShop.features")[1]}
-          </>,
-          <>
-            <FileText className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.akCarShop.features")[2]}
-          </>,
-          <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.akCarShop.features")[3]}
-          </>,
-        ],
-        demoUrl: "https://ak-car-shop-ag-proto-fal9.bolt.host/",
-      },
-      {
-        title: t("projects.zvrich.title"),
-        category: t("projects.zvrich.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
-        description: t("projects.zvrich.description"),
-        longDescription: t("projects.zvrich.longDescription"),
-        image: zvrichThumbnail,
-        images: [zvrichThumbnail],
-        technologies: [
-          "Lovable",
-          "React 18",
-          "TypeScript",
-          "Vite",
-          "Tailwind CSS",
-          "React Router DOM",
-        ],
-        features: [
-          <>
-            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.zvrich.features")[0]}
-          </>,
-          <>
-            <Smartphone className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.zvrich.features")[1]}
-          </>,
-          <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.zvrich.features")[2]}
-          </>,
-          <>
-            <FileText className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.zvrich.features")[3]}
-          </>,
-        ],
-        demoUrl: "https://orges-i.github.io/zvrich-ecommerce/",
-      },
+
       {
         title: t("projects.plantly.title"),
         category: t("projects.plantly.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
+        groups: ["AI Projects", "All Projects"],
         description: t("projects.plantly.description"),
         longDescription: t("projects.plantly.longDescription"),
         image: plantlyThumbnail,
@@ -546,10 +549,11 @@ export function ProjectsPage() {
         ],
         statusBadge: t("projects.inProcess"),
       },
+
       {
         title: t("projects.flow.title"),
         category: t("projects.flow.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
+        groups: ["AI Projects", "All Projects"],
         description: t("projects.flow.description"),
         longDescription: t("projects.flow.longDescription"),
         image: flowThumbnail,
@@ -606,8 +610,6 @@ export function ProjectsPage() {
     return <Code className="text-primary" size={20} />;
   };
 
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [activeGroup, setActiveGroup] = useState<(typeof GROUPS)[number]>(
     GROUPS[0]
   );
@@ -616,11 +618,6 @@ export function ProjectsPage() {
     activeGroup === "All Projects"
       ? projects
       : projects.filter((project) => project.groups.includes(activeGroup));
-
-  const openDetails = (project: Project) => {
-    setActiveProject(project);
-    setDetailsOpen(true);
-  };
 
   return (
     <div className="w-full py-20">
@@ -662,15 +659,6 @@ export function ProjectsPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card
-                role="button"
-                tabIndex={0}
-                onClick={() => openDetails(project)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    openDetails(project);
-                  }
-                }}
                 className={cn(
                   "overflow-hidden transition-all duration-300 hover:shadow-2xl",
                   project.featured
@@ -803,73 +791,10 @@ export function ProjectsPage() {
             </motion.div>
           ))}
         </div>
-
-        <Dialog
-          open={detailsOpen}
-          onOpenChange={(open: boolean) => {
-            setDetailsOpen(open);
-            if (!open) {
-              setActiveProject(null);
-            }
-          }}
-        >
-          <DialogContent className="sm:max-w-2xl">
-            <DialogHeader>
-              <DialogTitle>{activeProject?.title}</DialogTitle>
-              <DialogDescription>
-                {activeProject?.description ?? t("projects.subtitle")}
-              </DialogDescription>
-            </DialogHeader>
-            {activeProject && (
-              <div className="space-y-4">
-                <div className="flex items-center gap-2">
-                  {getCategoryIcon(activeProject.category)}
-                  <Badge variant="outline">{activeProject.category}</Badge>
-                </div>
-                <p className="text-muted-foreground">
-                  {activeProject.longDescription}
-                </p>
-                <div>
-                  <h4 className="mb-2 text-foreground">
-                    {t("projects.technologiesUsed")}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {activeProject.technologies.map((tech) => (
-                      <Badge
-                        key={`${activeProject.title}-tech-${tech}`}
-                        variant="secondary"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="mb-2 text-foreground">
-                    {t("projects.keyFeatures")}
-                  </h4>
-                  <ul className="grid gap-2 md:grid-cols-2">
-                    {activeProject.features
-                      .slice(0, 8)
-                      .map((feature, index) => (
-                        <li
-                          key={`${activeProject.title}-detail-feature-${index}`}
-                          className="flex items-start gap-2 text-muted-foreground"
-                        >
-                          <span
-                            className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"
-                            aria-hidden="true"
-                          />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            )}
-          </DialogContent>
-        </Dialog>
       </div>
     </div>
   );
 }
+
+
+

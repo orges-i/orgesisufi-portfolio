@@ -37,7 +37,7 @@ export const translations = {
       education: "Education",
       degree: "Computer Science",
       degreeText: "Bachelor's Degree | Web Programming",
-      university: "UBT – University for Business and Technology",
+      university: "UBT - University for Business and Technology",
       location: "Pristina, Kosovo",
       languages: "Languages",
       albanian: "Albanian",
@@ -55,7 +55,7 @@ export const translations = {
       ecomm: {
         title: "E-Comm Specialist",
         company: "Freelance / Contract Work",
-        period: "Jun 2024 – Jul 2025",
+        period: "Jun 2024 - Jul 2025",
         location: "Remote",
         type: "Freelance",
         responsibilities: [
@@ -71,7 +71,7 @@ export const translations = {
       frontend: {
         title: "Frontend Web Developer",
         company: "New Born Media",
-        period: "2021 – 2022",
+        period: "2021 - 2022",
         location: "Pristina, Kosovo",
         type: "Internship",
         responsibilities: [
@@ -110,7 +110,7 @@ export const translations = {
       capstoneProject: "Capstone Project",
       viewCertificate: "View Certificate",
       aiSpecialist: {
-        title: "AI Integrated Specialist – SaaS and Web Development",
+        title: "AI Integrated Specialist - SaaS and Web Development",
         description:
           "Comprehensive training in AI integration with SaaS and web development. Focused on leveraging AI models, prompt engineering, and modern development tools to build intelligent applications.",
         projectDescription:
@@ -247,7 +247,7 @@ export const translations = {
         features: ["Developer themed presentation"],
       },
       akCarShop: {
-        title: "AK CAR SHOP AG — Modern Automotive Concept Website",
+        title: "AK CAR SHOP AG - Modern Automotive Concept Website",
         category: "AI Projects | Web Development",
         description:
           "A modern and clean website designed for AK CAR SHOP AG, built to showcase vehicles and services to customers in Switzerland. The prototype/foundationo was created using Figma Make and was then developed and finalized using Bolt, resulting in a fast, responsive, and premium user experience tailored for an automotive brand.",
@@ -290,7 +290,7 @@ export const translations = {
         ],
       },
       plantly: {
-        title: "Plantly – AI Plant Identifier (iOS-Focused App)",
+        title: "Plantly - AI Plant Identifier (iOS-Focused App)",
         category: "AI Projects | Mobile",
         description:
           "An AI-powered plant identification experiment built while trying out Rork + Expo for iOS. Snap a plant photo to get instant identification, save it, and receive care guidance through a smooth, camera-first UI.",
@@ -304,7 +304,7 @@ export const translations = {
         ],
       },
       flow: {
-        title: "Flow – AI Resume Builder",
+        title: "Flow - AI Resume Builder",
         category: "AI Projects | Mobile",
         description:
           "An AI-powered resume builder experiment created while trying Vibecode + Expo for iOS. Craft a CV with a clean UI, get AI suggestions on structure and wording, and download the polished result right from the app.",
@@ -374,7 +374,7 @@ export const translations = {
       contactMe: "Kontaktoni",
       featuredProject: "Projekti Kryesor",
       featuredSubtitle:
-        "Zgjidhje të integruara me AI që shtyjnë kufijtë e mundësive",
+        "Projekti im i diplomës, i përfunduar si pjesë e programit AI Integrated Specialist në Future Minds Academy, dëshmon aftësinë time për të ndërtuar zgjidhje praktike dhe reale.",
       projectName: "Eduflow - Platforma për Krijim Kursesh",
       projectType: "SaaS Full-stack me Integrim AI",
       projectDescription:
@@ -393,7 +393,7 @@ export const translations = {
       education: "Arsimimi",
       degree: "Shkenca Kompjuterike",
       degreeText: "Bachelor's Degree | Ueb Programim",
-      university: "UBT – Universiteti për Biznes dhe Teknologji",
+      university: "UBT - Universiteti për Biznes dhe Teknologji",
       location: "Prishtinë, Kosovë",
       languages: "Gjuhët",
       albanian: "Shqip",
@@ -411,7 +411,7 @@ export const translations = {
       ecomm: {
         title: "Specialist E-Commerce",
         company: "Freelance / Pune Kontraktuale",
-        period: "Qer 2024 – Kor 2025",
+        period: "Qer 2024 - Kor 2025",
         location: "Largët",
         type: "Freelance",
         responsibilities: [
@@ -427,7 +427,7 @@ export const translations = {
       frontend: {
         title: "Zhvillues Frontend",
         company: "New Born Media",
-        period: "2021 – 2022",
+        period: "2021 - 2022",
         location: "Prishtinë, Kosovë",
         type: "Praktikë",
         responsibilities: [
@@ -467,7 +467,7 @@ export const translations = {
       capstoneProject: "Projekti Kulminues",
       viewCertificate: "Shiko Certifikatën",
       aiSpecialist: {
-        title: "Specialist i Integruar AI – SaaS dhe Zhvillim Web",
+        title: "Specialist i Integruar AI - SaaS dhe Zhvillim Web",
         description:
           "Trajnim gjithëpërfshirës në integrim AI me SaaS dhe zhvillim ueb. U fokusua në përdorimin e modeleve AI, inxhinieri të kërkesave dhe mjeteve moderne zhvillimi për të ndërtuar aplikacione inteligjente.",
         projectDescription:
@@ -513,7 +513,7 @@ export const translations = {
         ],
       },
       aerocommand: {
-        title: "AeroCommand – Menaxhimi i Flotës DroneOS (Në Zhvillim)",
+        title: "AeroCommand - Menaxhimi i Flotës DroneOS (Në Zhvillim)",
         category: "Projektet AI | Në Proces",
         description:
           "AeroCommand është një Software Operativ për Dronë (DroneOS) i plotë i dizajnuar për menaxhimin e flotave të dronëve. Ai thjeshton operacionet e fluturimit, gjurmimin e telemetrisë, përputhshmërinë rregullatore dhe analizat, duke u ofruar operatorëve kontroll dhe njohuri të plota mbi aktivitetet e dronëve të tyre.",
@@ -542,7 +542,7 @@ export const translations = {
         title: "Rec Base",
         category: "Projektet AI | CRM për Rekrutim",
         description:
-          "Rec Base është një CRM dhe ATS i lehtë rekrutimi i krijuar me Lovable, duke përdorur teknologji moderne si React, TailwindCSS dhe Supabase. Është dizajnuar për ekipet e vogla të punësimit për të menaxhuar me efikasitet kandidatët, klientët dhe punët me parsim CV të fuqizuar nga AI, kërkim Boolean, pipeline bashkëpunuese dhe gjurmim të aktivitetit — të gjitha brenda një aplikacioni të sigurt, të shkallëzueshëm dhe të lehtë për t'u përdorur.",
+          "Rec Base është një CRM dhe ATS i lehtë rekrutimi i krijuar me Lovable, duke përdorur teknologji moderne si React, TailwindCSS dhe Supabase. Është dizajnuar për ekipet e vogla të punësimit për të menaxhuar me efikasitet kandidatët, klientët dhe punët me parsim CV të fuqizuar nga AI, kërkim Boolean, pipeline bashkëpunuese dhe gjurmim të aktivitetit - të gjitha brenda një aplikacioni të sigurt, të shkallëzueshëm dhe të lehtë për t'u përdorur.",
         longDescription:
           "Një platformë moderne rekrutimi që kombinon fuqinë e AI-së me përvojën intuitive të përdoruesit për të thjeshtuar procesin e punësimit. E ndërtuar me shkallëzueshmëri dhe siguri në mendje, ofron karakteristika thelbësore ATS ndërsa ruan thjeshtësinë dhe lehtësinë e përdorimit.",
         features: [
@@ -605,7 +605,7 @@ export const translations = {
         features: ["Prezantim me temë zhvilluesi"],
       },
       akCarShop: {
-        title: "AK CAR SHOP AG — Faqe Moderne Automobilistike",
+        title: "AK CAR SHOP AG - Faqe Moderne Automobilistike",
         category: "Projekte AI | Zhvillim Web",
         description:
           "Një faqe moderne dhe e pastër për AK CAR SHOP AG në Zvicër. Prototipuar me Figma Make dhe përfunduar me Bolt për të ofruar një përvojë premium, të shpejtë dhe responsive për prezantimin e automjeteve dhe shërbimeve.",
@@ -648,7 +648,7 @@ export const translations = {
         ],
       },
       plantly: {
-        title: "Plantly – Identifikues Bimësh me AI (i fokusuar në iOS)",
+        title: "Plantly - Identifikues Bimësh me AI (i fokusuar në iOS)",
         category: "Projekte AI | Mobile",
         description:
           "Një eksperiment identifikimi bimësh me AI ndërsa testohet Rork + Expo për iOS. Bëni një foto të bimës për ta identifikuar menjëherë, për ta ruajtur dhe për të marrë këshilla kujdesi përmes një UI të butë të fokusuar te kamera.",
@@ -662,7 +662,7 @@ export const translations = {
         ],
       },
       flow: {
-        title: "Flow – Ndërtues CV me AI",
+        title: "Flow - Ndërtues CV me AI",
         category: "Projekte AI | Mobile",
         description:
           "Një eksperiment për ndërtimin e CV-ve me AI i krijuar gjatë testimit të Vibecode + Expo për iOS. Krijo një CV me UI të pastër, merr sugjerime nga AI për strukturën dhe formulimin, dhe shkarko versionin final direkt nga aplikacioni.",

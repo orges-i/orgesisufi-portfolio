@@ -62,7 +62,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`transition-colors relative ${
+                className={`transition-colors relative cursor-pointer ${
                   currentPage === item.id
                     ? 'text-primary'
                     : 'text-muted-foreground hover:text-foreground'
@@ -149,7 +149,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                   <motion.button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`text-left px-2 py-2 rounded-lg transition-colors ${
+                    className={`text-left px-2 py-2 rounded-lg transition-colors cursor-pointer ${
                       currentPage === item.id
                         ? 'text-primary bg-primary/10'
                         : 'text-muted-foreground hover:text-foreground hover:bg-accent'
@@ -167,4 +167,3 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
     </header>
   );
 }
-
