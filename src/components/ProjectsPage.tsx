@@ -662,6 +662,15 @@ export function ProjectsPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card
+                role="button"
+                tabIndex={0}
+                onClick={() => openDetails(project)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openDetails(project);
+                  }
+                }}
                 className={cn(
                   "overflow-hidden transition-all duration-300 hover:shadow-2xl",
                   project.featured
