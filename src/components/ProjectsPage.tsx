@@ -12,6 +12,7 @@ import {
   Lock,
   Database,
   MapPin,
+  Gauge,
 } from "lucide-react";
 import {
   Card,
@@ -43,6 +44,7 @@ import developerThumbnail from "../assets/developerportfoliothumbnail.png";
 import recbaseThumbnail from "../assets/recbasethumbnail.png";
 import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
 import bpmbodyThumbnail from "../assets/bpmbodythumnail.png";
+import uavThumbnail from "../assets/uavthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
 import developer3 from "../assets/developerportfolio3.png";
@@ -164,6 +166,46 @@ export function ProjectsPage() {
           <>
             <Lock className="inline mr-2 text-primary" size={16} />{" "}
             {t("projects.recbase.features")[2]}
+          </>,
+        ],
+      },
+      {
+        title: t("projects.uavAnalyzer.title"),
+        category: t("projects.uavAnalyzer.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.uavAnalyzer.description"),
+        longDescription: t("projects.uavAnalyzer.longDescription"),
+        image: uavThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1jppZ4C_ljmpHVAATNxh2C6TcM475xzsM/view?usp=drive_link",
+        demoUrl: "https://drone-battery-consumption-calculato.vercel.app/",
+        images: [uavThumbnail],
+        technologies: [
+          "Figma Make",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Recharts",
+          "shadcn/ui",
+          "jsPDF",
+        ],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={20} />{" "}
+            {t("projects.uavAnalyzer.features")[0]}
+          </>,
+          <>
+            <Gauge className="inline mr-2 text-primary" size={20} />{" "}
+            {t("projects.uavAnalyzer.features")[1]}
+          </>,
+          <>
+            <Code className="inline mr-2 text-primary" size={20} />{" "}
+            {t("projects.uavAnalyzer.features")[2]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={20} />{" "}
+            {t("projects.uavAnalyzer.features")[3]}
           </>,
         ],
       },
