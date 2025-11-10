@@ -13,19 +13,12 @@ export function SkillsPage() {
       icon: <Sparkles className="text-primary" size={32} />,
       color: 'primary',
       skills: [
-        'Gen AI',
-        'Prompt Engineering',
         'AI Integration',
-        'Cursor',
-        'Bolt V2',
-        'Lovable',
-        'Claude Code',
-        'V0',
-        'Rork',
-        'iOS Expo App Development',
-        'Design/Prototyping',
-        'Google Firebase Studio',
-        'Replit'
+        'Generative AI',
+        'App Development',
+        'AI-Powered SaaS Development',
+        'No-Code & Low-Code Development with AI',
+        'Prompt Engineering & LLM Reasoning'
       ],
     },
     {
