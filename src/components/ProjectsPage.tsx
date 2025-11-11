@@ -49,7 +49,7 @@ import zvrichThumbnail from "../assets/zvrichthumbnail.png";
 import plantlyThumbnail from "../assets/plantlythumbnail.png";
 import flowThumbnail from "../assets/flowthumbnail.png";
 import akCarShopThumbnail from "../assets/carshopthumbnail.png";
-import duobassThumbnail from "../assets/duobassthumnbail.png";
+import duobassThumbnail from "../assets/duobassthumbnail.png";
 import uavThumbnail from "../assets/uavthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
