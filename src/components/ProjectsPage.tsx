@@ -439,7 +439,20 @@ export function ProjectsPage() {
           "Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
         image: duobassThumbnail,
         technologies: ["Bolt V2", "React", "Tailwind CSS"],
-        features: [], // intentionally left empty per request
+        features: [
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />
+            Responsive on all screens
+          </>,
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            Branded to business needs
+          </>,
+          <>
+            <MapPin className="inline mr-2 text-primary" size={16} />
+            Map pinpoint location
+          </>,
+        ],
         demoUrl: "https://orges-i-duobassrecor-0ief.bolt.host/",
       },
 
