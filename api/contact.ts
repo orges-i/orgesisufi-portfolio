@@ -45,8 +45,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     await sendEmailViaResend({
       from: process.env.CONTACT_FROM_EMAIL!,
-      to: process.env.CONTACT_TO_EMAIL!,
-      reply_to: email,
+      to: [process.env.CONTACT_TO_EMAIL!],
+      reply_to: [email],
       subject: `Portfolio contact form: ${name}`,
       html: buildHtmlEmail({ name, email, message }),
       text: buildTextEmail({ name, email, message }),
@@ -59,7 +59,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function sendEmailViaResend(payload: Record<string, string>) {
+async function sendEmailViaResend(payload: Record<string, string | string[]>) {
   const response = await fetch(RESEND_API_URL, {
     method: 'POST',
     headers: {
