@@ -92,19 +92,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       text: buildTextEmail({ name, email, message }),
     });
 
+    console.log("Contact form submission successful");
     return res.status(200).json({ ok: true });
   } catch (error) {
+    console.error("=== ERROR IN CONTACT HANDLER ===");
+    console.error("Error type:", error?.constructor?.name);
+    console.error("Error:", error);
+
     if (error instanceof ResendRequestError) {
-      console.error("ResendRequestError:", error.message, error.details);
+      console.error("ResendRequestError - Status:", error.status);
+      console.error("ResendRequestError - Message:", error.message);
+      console.error("ResendRequestError - Details:", error.details);
       return res.status(error.status).json({ error: error.message });
     }
 
-    console.error("Unhandled contact form error:", error);
     console.error(
       "Error stack:",
       error instanceof Error ? error.stack : "No stack trace"
     );
-    return res.status(500).json({ error: extractErrorMessage(error) });
+    const errorMsg = extractErrorMessage(error);
+    console.error("Final error message:", errorMsg);
+    return res.status(500).json({ error: errorMsg });
   }
 }
 
@@ -119,32 +127,61 @@ class ResendRequestError extends Error {
   }
 }
 
-async function sendEmailViaResend(payload: Record<string, string | string[]>) {
-  const response = await fetch(RESEND_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
+async function sendEmailViaResend(payload: {
+  from: string;
+  to: string[];
+  reply_to: string[];
+  subject: string;
+  html: string;
+  text: string;
+}) {
+  try {
+    console.log("Sending email via Resend with payload:", {
+      from: payload.from,
+      to: payload.to,
+      reply_to: payload.reply_to,
+      subject: payload.subject,
+    });
 
-  const result = await response.json().catch(() => null);
+    const response = await fetch(RESEND_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
 
-  if (!response.ok) {
+    console.log("Resend response status:", response.status);
+
+    const result = await response.json().catch(() => null);
+    console.log("Resend response result:", result);
+
+    if (!response.ok) {
+      const errorMsg =
+        extractResendError(result) ??
+        `Resend request failed with status ${response.status}`;
+      console.error("Resend request failed:", errorMsg, result);
+      throw new ResendRequestError(response.status, errorMsg, result);
+    }
+
+    if (result?.error) {
+      const errorMsg =
+        extractResendError(result.error) ?? "Resend rejected the request.";
+      console.error("Resend error:", errorMsg, result.error);
+      throw new ResendRequestError(response.status, errorMsg, result.error);
+    }
+
+    console.log("Email sent successfully:", result?.id);
+  } catch (error) {
+    if (error instanceof ResendRequestError) {
+      throw error;
+    }
+    console.error("Unexpected error in sendEmailViaResend:", error);
     throw new ResendRequestError(
-      response.status,
-      extractResendError(result) ??
-        `Resend request failed with status ${response.status}`,
-      result
-    );
-  }
-
-  if (result?.error) {
-    throw new ResendRequestError(
-      response.status,
-      extractResendError(result.error) ?? "Resend rejected the request.",
-      result.error
+      500,
+      error instanceof Error ? error.message : "Failed to send email",
+      error
     );
   }
 }
