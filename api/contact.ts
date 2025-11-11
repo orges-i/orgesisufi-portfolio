@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 export const config = {
-  runtime: 'nodejs18.x',
+  runtime: 'nodejs',
 };
 
 const REQUIRED_ENV_VARS = ['RESEND_API_KEY', 'CONTACT_FROM_EMAIL', 'CONTACT_TO_EMAIL'] as const;
@@ -72,10 +72,12 @@ async function sendEmailViaResend(payload: Record<string, string>) {
   const result = await response.json().catch(() => null);
 
   if (!response.ok) {
+    console.error('Resend API returned non-OK status', response.status, result);
     throw new Error(extractResendError(result));
   }
 
   if (result?.error) {
+    console.error('Resend API reported error payload', result.error);
     throw new Error(extractResendError(result.error));
   }
 }
