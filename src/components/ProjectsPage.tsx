@@ -49,6 +49,7 @@ import zvrichThumbnail from "../assets/zvrichthumbnail.png";
 import plantlyThumbnail from "../assets/plantlythumbnail.png";
 import flowThumbnail from "../assets/flowthumbnail.png";
 import akCarShopThumbnail from "../assets/carshopthumbnail.png";
+import duobassThumbnail from "../assets/duobassthumnbail.png";
 import uavThumbnail from "../assets/uavthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
@@ -430,11 +431,13 @@ export function ProjectsPage() {
         title: "DuoBass Records Modern Website",
         category: "AI Projects | Web Development",
         groups: ["AI Projects", "Web Development", "All Projects"],
+        // first paragraph (short description)
         description:
-          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events. Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events.",
+        // second paragraph (longer description)
         longDescription:
-          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events. Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
-        image: akCarShopThumbnail,
+          "Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+        image: duobassThumbnail,
         technologies: ["Bolt V2", "React", "Tailwind CSS"],
         features: [], // intentionally left empty per request
         demoUrl: "https://orges-i-duobassrecor-0ief.bolt.host/",
