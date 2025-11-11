@@ -2,6 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
 const REQUIRED_ENV_VARS = ['RESEND_API_KEY', 'CONTACT_FROM_EMAIL', 'CONTACT_TO_EMAIL'] as const;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -9,7 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const body = parseBody(req.body);
+  const body = parseRequestBody(req.body);
   const name = body?.name?.trim();
   const email = body?.email?.trim();
   const message = body?.message?.trim();
@@ -26,54 +27,40 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Message is too long.' });
   }
 
-  const missingEnv = getMissingEnvVars();
+  const missingEnv = REQUIRED_ENV_VARS.filter((key) => !process.env[key]);
   if (missingEnv.length > 0) {
     console.error('Missing environment variables:', missingEnv.join(', '));
     return res.status(500).json({ error: 'Email service is not configured.' });
   }
 
   try {
-    const resend = createResendClient();
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL!,
-      to: [process.env.CONTACT_TO_EMAIL!],
+      to: process.env.CONTACT_TO_EMAIL!,
       replyTo: email,
       subject: `Portfolio contact form: ${name}`,
       html: buildHtmlEmail({ name, email, message }),
       text: buildTextEmail({ name, email, message }),
     });
 
+    if (error) {
+      console.error('Resend email error:', error);
+      return res.status(500).json({ error: extractErrorMessage(error) });
+    }
+
     return res.status(200).json({ ok: true });
   } catch (error) {
-    console.error('Resend email error:', error);
+    console.error('Unhandled email error:', error);
     return res.status(500).json({ error: extractErrorMessage(error) });
   }
 }
 
-function createResendClient() {
-  const apiKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey) {
-    throw new Error('Resend API key is not configured.');
-  }
-
-  return new Resend(apiKey);
-}
-
-function parseBody(body: VercelRequest['body']) {
-  if (!body) {
-    return null;
-  }
-
-  if (typeof body === 'string') {
-    return safeJsonParse(body);
-  }
-
-  if (Buffer.isBuffer(body)) {
-    return safeJsonParse(body.toString('utf8'));
-  }
-
-  return body as Record<string, string>;
+function parseRequestBody(body: VercelRequest['body']) {
+  if (!body) return null;
+  if (typeof body === 'string') return safeJsonParse(body);
+  if (Buffer.isBuffer(body)) return safeJsonParse(body.toString('utf8'));
+  if (typeof body === 'object') return body as Record<string, string>;
+  return null;
 }
 
 function safeJsonParse(payload: string) {
@@ -87,10 +74,6 @@ function safeJsonParse(payload: string) {
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function getMissingEnvVars() {
-  return REQUIRED_ENV_VARS.filter((key) => !process.env[key]);
 }
 
 function buildHtmlEmail({
@@ -147,19 +130,11 @@ function escapeHtml(value: string) {
 
 function extractErrorMessage(error: unknown) {
   if (!error) return 'Failed to send the message. Please try again later.';
-
-  if (typeof error === 'string') {
-    return error;
-  }
-
-  if (error instanceof Error) {
-    return error.message || 'Failed to send the message. Please try again later.';
-  }
-
+  if (typeof error === 'string') return error;
+  if (error instanceof Error) return error.message || 'Failed to send the message. Please try again later.';
   if (typeof error === 'object') {
     const maybeMessage = (error as { message?: string }).message;
     if (maybeMessage) return maybeMessage;
   }
-
   return 'Failed to send the message. Please try again later.';
 }
