@@ -37,7 +37,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL!,
       to: [process.env.CONTACT_TO_EMAIL!],
-      reply_to: email,
+      replyTo: email,
       subject: `Portfolio contact form: ${name}`,
       html: buildHtmlEmail({ name, email, message }),
       text: buildTextEmail({ name, email, message }),
