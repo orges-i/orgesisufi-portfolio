@@ -1,8 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const REQUIRED_ENV_VARS = ['RESEND_API_KEY', 'CONTACT_FROM_EMAIL', 'CONTACT_TO_EMAIL'] as const;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -35,6 +33,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    const resend = createResendClient();
     await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL!,
       to: [process.env.CONTACT_TO_EMAIL!],
@@ -49,6 +48,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Resend email error:', error);
     return res.status(500).json({ error: extractErrorMessage(error) });
   }
+}
+
+function createResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('Resend API key is not configured.');
+  }
+
+  return new Resend(apiKey);
 }
 
 function parseBody(body: VercelRequest['body']) {
