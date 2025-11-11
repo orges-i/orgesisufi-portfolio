@@ -46,6 +46,7 @@
             "react-router-dom": "^7.9.5",
             "react-swipeable": "^7.0.2",
             "recharts": "^2.15.2",
+            "resend": "^4.0.0",
             "sonner": "^2.0.3",
             "tailwind-merge": "*",
             "vaul": "^1.1.2"
@@ -54,12 +55,17 @@
             "@types/node": "^20.10.0",
             "@types/react": "^19.2.2",
             "@types/react-dom": "^19.2.2",
+            "@vercel/node": "^2.3.0",
             "@vitejs/plugin-react-swc": "^3.10.2",
             "typescript": "^5.9.3",
-            "vite": "6.3.5"
+            "vite": "^6.4.1"
       },
       "scripts": {
             "dev": "vite",
             "build": "vite build"
+      },
+      "overrides": {
+            "esbuild": "^0.27.0",
+            "path-to-regexp": "^6.3.0"
       }
 }
