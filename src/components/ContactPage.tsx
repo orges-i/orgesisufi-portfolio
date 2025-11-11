@@ -45,7 +45,7 @@ export function ContactPage() {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        throw new Error(data?.error ?? 'Unknown error');
+        throw new Error(data?.error ?? t('contact.error'));
       }
 
       toast.success(t('contact.success'));
@@ -54,7 +54,8 @@ export function ContactPage() {
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
       console.error('Failed to send contact message', error);
-      toast.error(t('contact.error'));
+      const message = error instanceof Error ? error.message : t('contact.error');
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }

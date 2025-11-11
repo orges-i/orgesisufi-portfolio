@@ -37,7 +37,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL!,
-      to: process.env.CONTACT_TO_EMAIL!,
+      to: [process.env.CONTACT_TO_EMAIL!],
       reply_to: email,
       subject: `Portfolio contact form: ${name}`,
       html: buildHtmlEmail({ name, email, message }),
@@ -47,7 +47,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error('Resend email error:', error);
-    return res.status(500).json({ error: 'Failed to send the message. Please try again later.' });
+    return res.status(500).json({ error: extractErrorMessage(error) });
   }
 }
 
@@ -134,4 +134,23 @@ function escapeHtml(value: string) {
         return char;
     }
   });
+}
+
+function extractErrorMessage(error: unknown) {
+  if (!error) return 'Failed to send the message. Please try again later.';
+
+  if (typeof error === 'string') {
+    return error;
+  }
+
+  if (error instanceof Error) {
+    return error.message || 'Failed to send the message. Please try again later.';
+  }
+
+  if (typeof error === 'object') {
+    const maybeMessage = (error as { message?: string }).message;
+    if (maybeMessage) return maybeMessage;
+  }
+
+  return 'Failed to send the message. Please try again later.';
 }
