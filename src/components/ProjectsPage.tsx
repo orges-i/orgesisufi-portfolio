@@ -425,6 +425,21 @@ export function ProjectsPage() {
         demoUrl: "https://ak-car-shop-ag-proto-fal9.bolt.host/",
       },
 
+      // DuoBass Records Modern Website (added)
+      {
+        title: "DuoBass Records Modern Website",
+        category: "AI Projects | Web Development",
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description:
+          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events. Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+        longDescription:
+          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events. Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+        image: akCarShopThumbnail,
+        technologies: ["Bolt V2", "React", "Tailwind CSS"],
+        features: [], // intentionally left empty per request
+        demoUrl: "https://orges-i-duobassrecor-0ief.bolt.host/",
+      },
+
       {
         title: t("projects.droneCamera.title"),
         category: t("projects.droneCamera.category"),
@@ -795,6 +810,3 @@ export function ProjectsPage() {
     </div>
   );
 }
-
-
-
