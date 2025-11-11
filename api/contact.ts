@@ -54,8 +54,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({ ok: true });
   } catch (error) {
+    if (error instanceof ResendRequestError) {
+      console.error('ResendRequestError:', error.message, error.details);
+      return res.status(error.status).json({ error: error.message });
+    }
+
     console.error('Unhandled contact form error:', error);
     return res.status(500).json({ error: extractErrorMessage(error) });
+  }
+}
+
+class ResendRequestError extends Error {
+  status: number;
+  details?: unknown;
+
+  constructor(status: number, message: string, details?: unknown) {
+    super(message);
+    this.status = status;
+    this.details = details;
   }
 }
 
@@ -72,13 +88,11 @@ async function sendEmailViaResend(payload: Record<string, string | string[]>) {
   const result = await response.json().catch(() => null);
 
   if (!response.ok) {
-    console.error('Resend API returned non-OK status', response.status, result);
-    throw new Error(extractResendError(result));
+    throw new ResendRequestError(response.status, extractResendError(result) ?? `Resend request failed with status ${response.status}`, result);
   }
 
   if (result?.error) {
-    console.error('Resend API reported error payload', result.error);
-    throw new Error(extractResendError(result.error));
+    throw new ResendRequestError(response.status, extractResendError(result.error) ?? 'Resend rejected the request.', result.error);
   }
 }
 
