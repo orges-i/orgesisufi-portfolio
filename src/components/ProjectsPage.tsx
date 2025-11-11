@@ -50,6 +50,18 @@ import plantlyThumbnail from "../assets/plantlythumbnail.png";
 import flowThumbnail from "../assets/flowthumbnail.png";
 import akCarShopThumbnail from "../assets/carshopthumbnail.png";
 import duobassThumbnail from "../assets/duobassthumbnail.png";
+import caplombierThumbnail from "../assets/caplombierthumbnail.png";
+import kimiumbautenThumbnail from "../assets/kimiumbauten.png";
+import oliveThumbnail from "../assets/olivethumbnail.png";
+import emryShowellThumbnail from "../assets/emryshowellthumbnail.png";
+import victoriaToursThumbnail from "../assets/victoriatoursthumbnail.png";
+import klinakuThumbnail from "../assets/klinakuthumbnail.png";
+import bletaThumbnail from "../assets/bletathumbnail.png";
+import newBornMediaThumbnail from "../assets/newbornmediathumbnail.png";
+import bmwThumbnail from "../assets/bmwthumbnail.png";
+import milkyWayThumbnail from "../assets/milkywaythumbnail.png";
+import hamLogThumbnail from "../assets/hamlogthumbnail.png";
+import mobileriaErioniThumbnail from "../assets/mobileriaerionithumbnail.png";
 import uavThumbnail from "../assets/uavthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
@@ -74,7 +86,11 @@ type Project = {
   statusBadge?: string;
 };
 
-const GROUPS = ["AI Projects", "Web Development", "All Projects"] as const;
+const GROUPS = [
+  { id: "AI Projects", labelKey: "projects.groups.ai" },
+  { id: "Web Development", labelKey: "projects.groups.web" },
+  { id: "All Projects", labelKey: "projects.groups.all" },
+] as const;
 
 export function ProjectsPage() {
   const { t } = useLanguage();
@@ -428,32 +444,56 @@ export function ProjectsPage() {
 
       // DuoBass Records Modern Website (added)
       {
-        title: "DuoBass Records Modern Website",
-        category: "AI Projects | Web Development",
+        title: t("projects.duoBass.title"),
+        category: t("projects.duoBass.category"),
         groups: ["AI Projects", "Web Development", "All Projects"],
         // first paragraph (short description)
-        description:
-          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events.",
+        description: t("projects.duoBass.description"),
         // second paragraph (longer description)
-        longDescription:
-          "Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+        longDescription: t("projects.duoBass.longDescription"),
         image: duobassThumbnail,
         technologies: ["Bolt V2", "React", "Tailwind CSS"],
         features: [
           <>
             <Smartphone className="inline mr-2 text-primary" size={16} />
-            Responsive on all screens
+            {t("projects.duoBass.features")[0]}
           </>,
           <>
             <Paintbrush className="inline mr-2 text-primary" size={16} />
-            Branded to business needs
+            {t("projects.duoBass.features")[1]}
           </>,
           <>
             <MapPin className="inline mr-2 text-primary" size={16} />
-            Map pinpoint location
+            {t("projects.duoBass.features")[2]}
           </>,
         ],
         demoUrl: "https://orges-i-duobassrecor-0ief.bolt.host/",
+      },
+
+      // CA Plombier Geneva Modern Website (added)
+      {
+        title: t("projects.caPlombier.title"),
+        category: t("projects.caPlombier.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.caPlombier.description"),
+        longDescription: t("projects.caPlombier.longDescription"),
+        image: caplombierThumbnail,
+        technologies: ["Bolt.new", "React", "Tailwind CSS"],
+        features: [
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />
+            {t("projects.caPlombier.features")[0]}
+          </>,
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.caPlombier.features")[1]}
+          </>,
+          <>
+            <Globe className="inline mr-2 text-primary" size={16} />
+            {t("projects.caPlombier.features")[2]}
+          </>,
+        ],
+        demoUrl: "https://ca-plombier-prototyp-e0bl.bolt.host/",
       },
 
       {
@@ -627,6 +667,243 @@ export function ProjectsPage() {
         ],
         statusBadge: t("projects.inProcess"),
       },
+
+      // KIMI Umbauten Modern Website (added)
+      {
+        title: t("projects.kimiUmbauten.title"),
+        category: t("projects.kimiUmbauten.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.kimiUmbauten.description"),
+        longDescription: t("projects.kimiUmbauten.longDescription"),
+        image: kimiumbautenThumbnail,
+        technologies: ["Bolt.new", "React", "Tailwind CSS"],
+        features: [
+          <>
+            <MapPin className="inline mr-2 text-primary" size={16} />
+            {t("projects.kimiUmbauten.features")[0]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />
+            {t("projects.kimiUmbauten.features")[1]}
+          </>,
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.kimiUmbauten.features")[2]}
+          </>,
+        ],
+        demoUrl: "https://orges-i.github.io/kimi-bauwelten/",
+      },
+
+      // Olive Medical Website Prototype Demo (added)
+      {
+        title: t("projects.oliveMedical.title"),
+        category: t("projects.oliveMedical.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.oliveMedical.description"),
+        longDescription: t("projects.oliveMedical.longDescription"),
+        image: oliveThumbnail,
+        technologies: ["Bolt.new", "React", "Tailwind CSS"],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />
+            {t("projects.oliveMedical.features")[0]}
+          </>,
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />
+            {t("projects.oliveMedical.features")[1]}
+          </>,
+        ],
+        demoUrl: "https://olivemedicalversion2.netlify.app/",
+        statusBadge: t("projects.inProcess"),
+      },
+
+      // Emry Showell Web Experience (added)
+      {
+        title: t("projects.emryShowell.title"),
+        category: t("projects.emryShowell.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.emryShowell.description"),
+        longDescription: t("projects.emryShowell.longDescription"),
+        image: emryShowellThumbnail,
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.emryShowell.features")[0]}
+          </>,
+        ],
+        demoUrl: "https://emryshowell.com",
+      },
+
+      // Victoria Tours Website Project (added)
+      {
+        title: t("projects.victoriaTours.title"),
+        category: t("projects.victoriaTours.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.victoriaTours.description"),
+        longDescription: t("projects.victoriaTours.longDescription"),
+        image: victoriaToursThumbnail,
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.victoriaTours.features")[0]}
+          </>,
+        ],
+        demoUrl: "https://orges-i.github.io/victoriatours/",
+      },
+
+      // Bleta E-commerce Web App (added)
+      {
+        title: t("projects.bleta.title"),
+        category: t("projects.bleta.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.bleta.description"),
+        longDescription: t("projects.bleta.longDescription"),
+        image: bletaThumbnail,
+        technologies: ["MongoDB", "Express.js", "React (Vite)", "Node.js"],
+        features: [
+          <>
+            <Layers className="inline mr-2 text-primary" size={16} />
+            {t("projects.bleta.features")[0]}
+          </>,
+          <>
+            <ShoppingCart className="inline mr-2 text-primary" size={16} />
+            {t("projects.bleta.features")[1]}
+          </>,
+          <>
+            <Lock className="inline mr-2 text-primary" size={16} />
+            {t("projects.bleta.features")[2]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
+      },
+
+      // New Born Media Full Stack Web App (added)
+      {
+        title: t("projects.newBornMedia.title"),
+        category: t("projects.newBornMedia.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.newBornMedia.description"),
+        longDescription: t("projects.newBornMedia.longDescription"),
+        image: newBornMediaThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1Esgu1s237Ufr4afVrSvkdVnGE6OfKQvk/view",
+        technologies: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Node.js",
+          "Handlebars.js",
+          "MongoDB",
+          "Express.js",
+        ],
+        features: [
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />
+            {t("projects.newBornMedia.features")[0]}
+          </>,
+          <>
+            <Lock className="inline mr-2 text-primary" size={16} />
+            {t("projects.newBornMedia.features")[1]}
+          </>,
+        ],
+      },
+
+      // BMW Group Demo Side Project (added)
+      {
+        title: t("projects.bmwGroup.title"),
+        category: t("projects.bmwGroup.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.bmwGroup.description"),
+        longDescription: t("projects.bmwGroup.longDescription"),
+        image: bmwThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1kw2rC41U-NqUH17wWGMFAdoLQrfTfE8b/view",
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />
+            {t("projects.bmwGroup.features")[0]}
+          </>,
+        ],
+      },
+
+      // Klinaku & Associates Website (added)
+      {
+        title: t("projects.klinaku.title"),
+        category: t("projects.klinaku.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.klinaku.description"),
+        longDescription: t("projects.klinaku.longDescription"),
+        image: klinakuThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1BQZS7sxjeIYbPtqFBsqiO4CYjzTt-B_I/view",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.klinaku.features")[0]}
+          </>,
+        ],
+      },
+
+      // Milky Way Farm Capstone (added)
+      {
+        title: t("projects.milkyWay.title"),
+        category: t("projects.milkyWay.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.milkyWay.description"),
+        longDescription: t("projects.milkyWay.longDescription"),
+        image: milkyWayThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1wMXXgHqefLXaScN8yztOnKwdpu4FttYp/view",
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
+        features: [
+          <>
+            <Smartphone className="inline mr-2 text-primary" size={16} />
+            {t("projects.milkyWay.features")[0]}
+          </>,
+        ],
+      },
+
+      // Ham-Log Gruppe Front End Website (added)
+      {
+        title: t("projects.hamLog.title"),
+        category: t("projects.hamLog.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.hamLog.description"),
+        longDescription: t("projects.hamLog.longDescription"),
+        image: hamLogThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1Ed5siYdw5N7PQiWUfSqXhgAqBCCBq_4T/view?usp=sharing",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.hamLog.features")[0]}
+          </>,
+        ],
+      },
+
+      // Mobileria Erioni Website (added)
+      {
+        title: t("projects.mobileriaErioni.title"),
+        category: t("projects.mobileriaErioni.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.mobileriaErioni.description"),
+        longDescription: t("projects.mobileriaErioni.longDescription"),
+        image: mobileriaErioniThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1SwVZZnF687McC4TWTus4dXj8oNduXEAl/view?usp=sharing",
+        technologies: ["Cursor"],
+        features: [
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />
+            {t("projects.mobileriaErioni.features")[0]}
+          </>,
+        ],
+      },
     ],
     [t]
   );
@@ -641,8 +918,8 @@ export function ProjectsPage() {
     return <Code className="text-primary" size={20} />;
   };
 
-  const [activeGroup, setActiveGroup] = useState<(typeof GROUPS)[number]>(
-    GROUPS[0]
+  const [activeGroup, setActiveGroup] = useState<(typeof GROUPS)[number]["id"]>(
+    GROUPS[0].id
   );
 
   const projectsToDisplay =
@@ -664,19 +941,19 @@ export function ProjectsPage() {
         </motion.div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-2 rounded-2xl bg-muted/20 p-1">
-          {GROUPS.map((group) => (
+          {GROUPS.map(({ id, labelKey }) => (
             <button
-              key={group}
+              key={id}
               type="button"
-              onClick={() => setActiveGroup(group)}
+              onClick={() => setActiveGroup(id)}
               className={cn(
                 "flex-1 min-w-[140px] rounded-xl px-3 py-2 text-sm font-medium transition-colors md:text-base",
-                activeGroup === group
+                activeGroup === id
                   ? "bg-primary text-primary-foreground shadow"
                   : "bg-transparent text-muted-foreground hover:bg-accent/40 hover:text-foreground"
               )}
             >
-              {group}
+              {t(labelKey)}
             </button>
           ))}
         </div>

@@ -137,6 +137,11 @@ export const translations = {
       sourceCode: "Source Code",
       inProcess: "In Process",
       previewImages: "Preview Images",
+      groups: {
+        ai: "AI Projects",
+        web: "Web Development",
+        all: "All Projects",
+      },
       eduflow: {
         title: "Eduflow - Course Creation Platform",
         category: "SaaS / AI Integration",
@@ -319,6 +324,139 @@ export const translations = {
           "Designed for iOS first with experimental Web & Android support",
         ],
       },
+      duoBass: {
+        title: "DuoBass Records Modern Website",
+        category: "AI Projects | Web Development",
+        description:
+          "A sleek, modern website for DuoBass Records, showcasing artists, releases, and events.",
+        longDescription:
+          "Designed for a responsive, engaging user experience with smooth navigation and an emphasis on music branding.",
+        features: [
+          "Responsive across every screen size",
+          "Branded visuals tailored to the label",
+          "Embedded map pinpointing locations",
+        ],
+      },
+      caPlombier: {
+        title: "CA Plombier Geneva - Modern Website",
+        category: "AI Projects | Web Development",
+        description:
+          "A modern, responsive website for a Geneva-based plumbing company, built to showcase their services and enable 24/7 emergency contact.",
+        longDescription:
+          "Designed and developed with Bolt.new, the experience pairs clean navigation, service listings, and contact forms for fast outreach.",
+        features: [
+          "Responsive across devices",
+          "Tailored to business needs",
+          "Google reviews integrated",
+        ],
+      },
+      kimiUmbauten: {
+        title: "KIMI Umbauten - Modern Website",
+        category: "AI Projects | Web Development",
+        description: "A modern, responsive website built with Bolt.new.",
+        longDescription:
+          "This project showcases the ability to create professional, visually appealing websites with clean design, responsive layouts, and interactive components.",
+        features: [
+          "Map pinpointed for on-site services",
+          "Responsive across devices",
+          "Branded, polished UI components",
+        ],
+      },
+      oliveMedical: {
+        title: "Olive Medical - Website Prototype Demo",
+        category: "AI Projects | Web Development",
+        description:
+          "A demo website built quickly with Bolt.new for presentation to a client.",
+        longDescription:
+          "This project showcases a clean, responsive design with interactive sections, highlighting workflow for rapid web design and prototyping.",
+        features: [
+          "Quick client presentation",
+          "Fully responsive layout",
+        ],
+      },
+      emryShowell: {
+        title: "Emry Showell - Business Website",
+        category: "Web Development",
+        description:
+          "A website created and tailored to the business brand using a pre-designed template.",
+        longDescription:
+          "This project showcases responsive design, clean layouts, and interactive sections for an online presence.",
+        features: ["Branded to the business's needs"],
+      },
+      victoriaTours: {
+        title: "Victoria Tours - Website Project",
+        category: "Web Development",
+        description:
+          "A live website created from a template and specifically tailored to the client's needs.",
+        longDescription:
+          "The project highlights responsive design, clean layouts, and interactive sections adapted for the business brand.",
+        features: ["Template tailored to client needs"],
+      },
+      bleta: {
+        title: "Bleta - E-commerce Web App (University Lab Project)",
+        category: "Web Development",
+        description:
+          "A full-featured e-commerce web application developed as part of a university lab course at UBT.",
+        longDescription:
+          "This project demonstrates full-stack development, product management, and user interaction with a robust architecture.",
+        features: [
+          "Product catalog and management",
+          "Shopping cart and checkout system",
+          "User authentication flows",
+        ],
+      },
+      newBornMedia: {
+        title: "New Born Media - Full Stack Web App (Uni Lab Course Project)",
+        category: "Web Development",
+        description:
+          "A full-stack web application developed as part of a university lab project at UBT.",
+        longDescription:
+          "This project demonstrates full-stack development, dynamic content handling, and user authentication.",
+        features: [
+          "CMS for content management",
+          "User authentication",
+        ],
+      },
+      bmwGroup: {
+        title: "BMW Group Demo Side Project",
+        category: "Web Development",
+        description: "A demo website built quickly for presentation.",
+        longDescription:
+          "Created from scratch to showcase layout, design, and functionality.",
+        features: ["Demo project"],
+      },
+      milkyWay: {
+        title: "Milky Way Farm - Cacttus Education Front-End Capstone",
+        category: "Web Development",
+        description:
+          "A front-end capstone project developed as part of the Cacttus Education program.",
+        longDescription:
+          "This site demonstrates a responsive layout, clean UI, and interactive behavior tailored to Milky Way Farm.",
+        features: ["Responsive on screens"],
+      },
+      hamLog: {
+        title: "Ham-Log Gruppe - Front End Website",
+        category: "Web Development",
+        description: "A website project created to meet the client's business needs.",
+        longDescription: "Focused on clean presentation and simplicity.",
+        features: ["Tailored to business needs"],
+      },
+      mobileriaErioni: {
+        title: "Mobileria Erioni - Website Project",
+        category: "AI Projects | Web Development",
+        description: "A website developed to present the business online.",
+        longDescription:
+          "Built with attention to responsive design and clean usability.",
+        features: ["Tailored to business needs"],
+      },
+      klinaku: {
+        title: "Klinaku & Associates - Website",
+        category: "Web Development",
+        description: "A website tailored to the client's needs.",
+        longDescription:
+          "Although no longer live, the build demonstrates responsive design, clean layouts, and interactive elements crafted for a professional presence.",
+        features: ["Tailored to client needs"],
+      },
     },
     contact: {
       title: "Get In Touch",
@@ -495,6 +633,11 @@ export const translations = {
       sourceCode: "Kodi Burimor",
       inProcess: "Në Proces",
       previewImages: "Shiko Imazhet",
+      groups: {
+        ai: "Projektet AI",
+        web: "Zhvillim Web",
+        all: "Të Gjitha Projektet",
+      },
       eduflow: {
         title: "Eduflow - Platforma për Krijim Kursesh",
         category: "SaaS / Integrim AI",
@@ -677,6 +820,140 @@ export const translations = {
           "Autosave dhe ruajtje lokale për draftet",
           "Projektuar për iOS fillimisht, me mbështetje eksperimentale për Web & Android",
         ],
+      },
+      duoBass: {
+        title: "DuoBass Records - Faqe Moderne",
+        category: "Projektet AI | Zhvillim Web",
+        description:
+          "Një faqe moderne dhe elegante për DuoBass Records që prezanton artistët, publikimet dhe eventet.",
+        longDescription:
+          "Projektuar për një përvojë responsive dhe tërheqëse me navigim të rrjedhshëm dhe fokus te identiteti muzikor.",
+        features: [
+          "Responsive në çdo madhësi ekrani",
+          "Vizuale të personalizuara sipas label-it",
+          "Hartë e integruar për lokacionin",
+        ],
+      },
+      caPlombier: {
+        title: "CA Plombier Geneva - Faqe Moderne",
+        category: "Projektet AI | Zhvillim Web",
+        description:
+          "Një faqe moderne dhe responsive për një kompani hidraulike në Gjenevë, e ndërtuar për të shfaqur shërbimet dhe kontaktin 24/7.",
+        longDescription:
+          "Zhvilluar me Bolt.new me navigim të pastër, lista shërbimesh dhe formularë kontakti miqësorë për përdoruesit.",
+        features: [
+          "Responsive në çdo pajisje",
+          "E personalizuar sipas nevojave të biznesit",
+          "Integrim i Google Reviews",
+        ],
+      },
+      kimiUmbauten: {
+        title: "KIMI Umbauten - Faqe Moderne",
+        category: "Projektet AI | Zhvillim Web",
+        description:
+          "Një faqe moderne dhe responsive e ndërtuar me Bolt.new.",
+        longDescription:
+          "Dëshmon aftësinë për të krijuar faqe profesionale me dizajn të pastër, layout-e responsive dhe seksione interaktive.",
+        features: [
+          "Hartë e saktë për shërbimet në terren",
+          "Përshtatet në çdo pajisje",
+          "Komponentë UI të personalizuar për markën",
+        ],
+      },
+      oliveMedical: {
+        title: "Olive Medical - Demo e Faqes",
+        category: "Projektet AI | Zhvillim Web",
+        description:
+          "Një faqe demo e ndërtuar shpejt me Bolt.new për ta prezantuar te klienti.",
+        longDescription:
+          "Tregon dizajn të pastër, responsive dhe seksione interaktive, duke nxjerrë në pah rrjedhën e shpejtë të prototipimit.",
+        features: [
+          "Prezantim i shpejtë për klientin",
+          "Layout plotësisht responsive",
+        ],
+      },
+      emryShowell: {
+        title: "Emry Showell - Faqe Biznesi",
+        category: "Zhvillim Web",
+        description:
+          "Një faqe e krijuar nga një template dhe e përshtatur posaçërisht për markën e biznesit.",
+        longDescription:
+          "Shfaq dizajn responsive, layout-e të pastra dhe seksione interaktive për praninë online.",
+        features: ["Template i personalizuar sipas biznesit"],
+      },
+      victoriaTours: {
+        title: "Victoria Tours - Projekt Uebi",
+        category: "Zhvillim Web",
+        description:
+          "Një faqe live e krijuar nga një template dhe e përshtatur për nevojat e klientit.",
+        longDescription:
+          "Thekson dizajnin responsive, layout-et e pastra dhe seksionet interaktive të përshtatura për markën.",
+        features: ["Template i përshtatur për klientin"],
+      },
+      bleta: {
+        title: "Bleta - Aplikacion E-commerce (Projekt Laboratori)",
+        category: "Zhvillim Web",
+        description:
+          "Një aplikacion i plotë e-commerce i zhvilluar si pjesë e një kursi laboratori në UBT.",
+        longDescription:
+          "Ky projekt demonstron zhvillim full-stack, menaxhim produktesh dhe ndërveprim të përdoruesit me një arkitekturë të fuqishme.",
+        features: [
+          "Katalog dhe menaxhim produktesh",
+          "Shportë blerjesh dhe proces pagesash",
+          "Autentifikim përdoruesish",
+        ],
+      },
+      newBornMedia: {
+        title: "New Born Media - Aplikacion Full Stack (Projekt Laboratori)",
+        category: "Zhvillim Web",
+        description:
+          "Një aplikacion full-stack i zhvilluar si pjesë e një projekti laboratori në UBT.",
+        longDescription:
+          "Ky projekt demonstron zhvillim full-stack, menaxhim dinamik të përmbajtjes dhe autentifikim përdoruesish.",
+        features: [
+          "CMS për menaxhimin e përmbajtjes",
+          "Autentifikim përdoruesish",
+        ],
+      },
+      bmwGroup: {
+        title: "BMW Group - Projekt Demo",
+        category: "Zhvillim Web",
+        description: "Një faqe demo e ndërtuar shpejt për prezantim.",
+        longDescription:
+          "E krijuar nga e para për të demonstruar layout-in, dizajnin dhe funksionalitetin.",
+        features: ["Projekt demo"],
+      },
+      milkyWay: {
+        title: "Milky Way Farm - Projekt Kapston Front-End",
+        category: "Zhvillim Web",
+        description:
+          "Një projekt kapston front-end i zhvilluar si pjesë e programit Cacttus Education.",
+        longDescription:
+          "Kjo faqe demonstron layout responsive, UI të pastër dhe sjellje interaktive të përshtatura për Milky Way Farm.",
+        features: ["Responsive në të gjitha ekranet"],
+      },
+      hamLog: {
+        title: "Ham-Log Gruppe - Faqe Front End",
+        category: "Zhvillim Web",
+        description: "Një projekt uebi i krijuar për të përmbushur nevojat e biznesit të klientit.",
+        longDescription: "I fokusuar në paraqitje të pastër dhe thjeshtësi.",
+        features: ["E përshtatur sipas nevojave të biznesit"],
+      },
+      mobileriaErioni: {
+        title: "Mobileria Erioni - Projekt Uebi",
+        category: "Projektet AI | Zhvillim Web",
+        description: "Një faqe e zhvilluar për të prezantuar biznesin online.",
+        longDescription:
+          "Ndërtuar me fokus në dizajnin responsive dhe përdorimin e pastër.",
+        features: ["E përshtatur sipas nevojave të biznesit"],
+      },
+      klinaku: {
+        title: "Klinaku & Associates - Faqe Uebi",
+        category: "Zhvillim Web",
+        description: "Një faqe e përshtatur posaçërisht për nevojat e klientit.",
+        longDescription:
+          "Edhe pse nuk është më aktive, kjo punë demonstron dizajn responsive, layout-e të pastra dhe elemente interaktive të krijuara për një prezencë profesionale online.",
+        features: ["E përshtatur sipas kërkesave të klientit"],
       },
     },
     contact: {
