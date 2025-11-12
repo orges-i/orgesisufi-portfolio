@@ -162,9 +162,9 @@ export function ProjectsPage() {
         longDescription: t("projects.recbase.longDescription"),
         image: recbaseThumbnail,
         previewUrl:
-          "https://drive.google.com/file/d/1ftrPytsDgL2AA57DEovazxKogEuuVfo8/view?usp=sharing",
+          "https://drive.google.com/file/d/1bOXXvsfBNeTJ7fl2zocLbyj245chG9Fh/view?usp=sharing",
         images: [
-          "https://drive.google.com/file/d/1ftrPytsDgL2AA57DEovazxKogEuuVfo8/view?usp=sharing",
+          "https://drive.google.com/file/d/1bOXXvsfBNeTJ7fl2zocLbyj245chG9Fh/view?usp=sharing",
         ],
         technologies: [
           "React",
