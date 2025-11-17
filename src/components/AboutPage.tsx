@@ -1,9 +1,8 @@
-import { GraduationCap, Languages, MapPin, Download } from 'lucide-react';
+import { Languages, MapPin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
-import profileImage from 'figma:asset/46ec34ed9c16ed2478710595d308ac5e6d75c204.png';
 
 export function AboutPage() {
   const { t } = useLanguage();
@@ -19,23 +18,7 @@ export function AboutPage() {
         >
           <h1 className="text-foreground mb-6">{t('about.title')}</h1>
           
-          {/* Profile Image */}
           <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
-            <motion.div
-              className="relative w-48 h-48 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-xl"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src={profileImage}
-                alt="Orges Isufi"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </motion.div>
-
             <motion.div
               className="flex-1 prose prose-lg max-w-none"
               initial={{ opacity: 0, x: 20 }}
