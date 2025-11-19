@@ -1,4 +1,8 @@
-import { Linkedin, Github, Mail } from 'lucide-react';
+import {
+  Linkedin,
+  Mail,
+  // Github,
+} from 'lucide-react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -26,18 +30,20 @@ export function Footer() {
               <span>LinkedIn</span>
             </motion.a>
             
-            <motion.a
-              href="https://github.com/orges-i"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              title="GitHub Profile"
-            >
-              <Github size={20} />
-              <span>GitHub</span>
-            </motion.a>
+            {/*
+              <motion.a
+                href="https://github.com/orges-i"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                title="GitHub Profile"
+              >
+                <Github size={20} />
+                <span>GitHub</span>
+              </motion.a>
+            */}
             
             <motion.a
               href="mailto:orgesisufi1@hotmail.com"

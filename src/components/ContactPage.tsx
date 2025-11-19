@@ -1,5 +1,11 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Send, CheckCircle, Github } from 'lucide-react';
+import {
+  Mail,
+  Linkedin,
+  Send,
+  CheckCircle,
+  // Github,
+} from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -189,21 +195,23 @@ export function ContactPage() {
                   </div>
                 </motion.a>
 
-                <motion.a
-                  href="https://github.com/orges-i"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Github className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <p className="text-foreground">{t('contact.github')}</p>
-                  </div>
-                </motion.a>
+                {/*
+                  <motion.a
+                    href="https://github.com/orges-i"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <Github className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-foreground">{t('contact.github')}</p>
+                    </div>
+                  </motion.a>
+                */}
 
                 <motion.a
                   href="mailto:orgesisufi1@hotmail.com"
