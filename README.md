@@ -1,7 +1,5 @@
 
-  # Portfolio Website PRD
-
-  This is a code bundle for Portfolio Website PRD. The original project is available at https://www.figma.com/design/3FYUOt7ptPq9bbJrUuybkD/Portfolio-Website-PRD.
+  # My Portfolio Website
 
   ## Running the code
 
