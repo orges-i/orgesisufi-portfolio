@@ -55,7 +55,6 @@ export function SkillsPage() {
 
   const additionalTools = [
     'Supabase',
-    'APIs',
     'Canva',
     'Notion',
     'Trello',

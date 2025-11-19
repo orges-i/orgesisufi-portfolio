@@ -18,8 +18,6 @@ import {
   Layers,
   Leaf,
   Globe,
-  Download,
-  Save,
 } from "lucide-react";
 import {
   Card,
@@ -39,15 +37,15 @@ import eduflow1 from "../assets/eduflow1.png";
 import eduflow2 from "../assets/eduflow2.png";
 import eduflow3 from "../assets/eduflow3.png";
 import eduflow4 from "../assets/eduflow4.png";
-import aerocommandImage from "../assets/aerocommandthumbnail.png";
+// import aerocommandImage from "../assets/aerocommandthumbnail.png";
 import developerThumbnail from "../assets/developerportfoliothumbnail.png";
 import recbaseThumbnail from "../assets/recbasethumbnail.png";
-import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
+// import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
 import bpmbodyThumbnail from "../assets/bpmbodythumnail.png";
 import droneCameraThumbnail from "../assets/dronecamerathumbnail.png";
 import zvrichThumbnail from "../assets/zvrichthumbnail.png";
 import plantlyThumbnail from "../assets/plantlythumbnail.png";
-import flowThumbnail from "../assets/flowthumbnail.png";
+// import flowThumbnail from "../assets/flowthumbnail.png";
 import akCarShopThumbnail from "../assets/carshopthumbnail.png";
 import duobassThumbnail from "../assets/duobassthumbnail.png";
 import caplombierThumbnail from "../assets/caplombierthumbnail.png";

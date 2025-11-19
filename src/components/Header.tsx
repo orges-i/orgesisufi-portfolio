@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Moon, Sun, Languages, Download } from 'lucide-react';
-import { Button } from './ui/button';
+import { Menu, X, Moon, Sun, Languages } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import {
@@ -84,16 +83,10 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
 
           {/* Theme Toggle & Language Selector */}
           <div className="flex items-center gap-2">
-            <motion.a
-              href="#" // Replace with your resume URL when ready
-              className="h-9 w-9 md:w-auto md:px-3 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              title="Download Resume"
-            >
-              <Download className="h-4 w-4 md:mr-2" />
-              <span className="hidden md:inline">Resume</span>
-            </motion.a>
+            <div
+              aria-hidden="true"
+              className="h-9 w-9 md:w-auto md:px-3 inline-flex items-center justify-center rounded-md invisible"
+            />
             <DropdownMenu>
               <DropdownMenuTrigger className="h-9 w-9 inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors">
                 <Languages size={18} />
