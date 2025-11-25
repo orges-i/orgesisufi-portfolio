@@ -13,7 +13,7 @@ export const translations = {
       title: "Orges Isufi",
       subtitle: "AI Integrated Specialist | SaaS & E-Commerce Solutions",
       intro:
-        "Hi, I'm a CS student graduating in Computer Science with a passion for integrating AI into web development and building innovative SaaS solutions. I specialize in creating AI-powered applications that solve real-world problems.",
+        "Hi, I'm a CS student graduating in Computer Science with a passion for integrating AI into web development and building innovative SaaS solutions.",
       viewPortfolio: "View Portfolio",
       contactMe: "Contact Me",
       featuredProject: "Featured Project",
@@ -75,13 +75,7 @@ export const translations = {
         location: "Pristina, Kosovo",
         type: "Internship",
         responsibilities: [
-          "Developed responsive web pages using HTML5, CSS3, JavaScript, and Bootstrap",
-          "Collaborated with design and development teams to implement pixel-perfect UI designs",
-          "Implemented jQuery for interactive features and enhanced user experiences",
-          "Ensured cross-browser compatibility and responsive design across all devices",
-          "Conducted thorough website testing to identify and resolve bugs",
-          "Assisted in website deployment and maintenance processes",
-          "Learned and applied modern front-end development best practices",
+          "Front-end web development intern, gaining hands-on experience in building responsive websites and improving functionality, while learning best practices in HTML, CSS, JavaScript, Bootstrap, and collaborating with a development team.",
         ],
       },
     },
@@ -125,6 +119,11 @@ export const translations = {
         title: "EF SET English Certificate (C2 Proficient)",
         description:
           "Certified C2 level (Proficient) in English language proficiency.",
+      },
+      digitalMarketing: {
+        title: "Digital Marketing Fundamentals",
+        description:
+          "Completed online course covering basic concepts in digital marketing.",
       },
     },
     projects: {
@@ -281,7 +280,8 @@ export const translations = {
         ],
       },
       zvrich: {
-        title: "Zvrich | Kids Fashion E-Commerce Frontend UI Makeover Prototype",
+        title:
+          "Zvrich | Kids Fashion E-Commerce Frontend UI Makeover Prototype",
         category: "AI Projects | Web Development",
         description:
           "A UI front-end makeover for ZVRICH GmbH, a Swiss kidswear store. Designed around the client brand with polished visuals, responsive layouts, and a mobile-first shopping experience.",
@@ -369,10 +369,7 @@ export const translations = {
           "A demo website built quickly with Bolt.new for presentation to a client.",
         longDescription:
           "This project showcases a clean, responsive design with interactive sections, highlighting workflow for rapid web design and prototyping.",
-        features: [
-          "Quick client presentation",
-          "Fully responsive layout",
-        ],
+        features: ["Quick client presentation", "Fully responsive layout"],
       },
       emryShowell: {
         title: "Emry Showell - Business Website",
@@ -412,10 +409,7 @@ export const translations = {
           "A full-stack web application developed as part of a university lab project at UBT.",
         longDescription:
           "This project demonstrates full-stack development, dynamic content handling, and user authentication.",
-        features: [
-          "CMS for content management",
-          "User authentication",
-        ],
+        features: ["CMS for content management", "User authentication"],
       },
       bmwGroup: {
         title: "BMW Group Demo Side Project",
@@ -437,7 +431,8 @@ export const translations = {
       hamLog: {
         title: "Ham-Log Gruppe - Front End Website",
         category: "Web Development",
-        description: "A website project created to meet the client's business needs.",
+        description:
+          "A website project created to meet the client's business needs.",
         longDescription: "Focused on clean presentation and simplicity.",
         features: ["Tailored to business needs"],
       },
@@ -475,7 +470,8 @@ export const translations = {
       sending: "Sending...",
       sent: "Sent!",
       success: "Message sent successfully! I'll get back to you soon.",
-      error: "Something went wrong while sending your message. Please try again.",
+      error:
+        "Something went wrong while sending your message. Please try again.",
       connectWith: "Connect With Me",
       connectSubtitle: "Find me on other platforms",
       linkedin: "LinkedIn",
@@ -508,7 +504,7 @@ export const translations = {
       title: "Orges Isufi",
       subtitle: "Specialist i Integrimit të AI | Zgjidhje SaaS & E-Commerce",
       intro:
-        "Përshëndetje, jam student i Shkencave Kompjuterike me pasion për integrimin e AI-së në zhvillimin e uebit dhe ndërtimin e zgjidhjeve inovative SaaS. Specializohem në krijimin e aplikacioneve të fuqizuara nga AI që zgjidhin problemet reale.",
+        "Përshëndetje, jam student i Shkencave Kompjuterike me pasion për integrimin e AI-së në zhvillimin e uebit dhe ndërtimin e zgjidhjeve inovative SaaS.",
       viewPortfolio: "Shiko Portfolion",
       contactMe: "Kontaktoni",
       featuredProject: "Projekti Kryesor",
@@ -570,13 +566,7 @@ export const translations = {
         location: "Prishtinë, Kosovë",
         type: "Praktikë",
         responsibilities: [
-          "Zhvillova faqe ueb responsive duke përdorur HTML5, CSS3, JavaScript dhe Bootstrap",
-          "Bashkëpunova me ekipet e dizajnit dhe zhvillimit për të zbatuar dizajne UI të sakta",
-          "Zbatova jQuery për karakteristika interaktive dhe përvoja të përmirësuara të përdoruesit",
-          "Sigurova kompatibilitet ndër-shfletues dhe dizajn responsive në të gjitha pajisjet",
-          "Kryera testim të plotë të faqeve për të identifikuar dhe zgjidhur probleme",
-          "Ndihmova në proceset e vendosjes dhe mirëmbajtjes së faqeve",
-          "Mësova dhe zbatova praktikat më të mira të zhvillimit modern front-end",
+          "Praktikant ne zhvillimin front-end, me pervoje praktike ne ndertimin e faqeve responsive dhe permiresimin e funksionalitetit, duke mesuar praktikat me te mira ne HTML, CSS, JavaScript, Bootstrap dhe duke bashk?punuar me nje ekip zhvillimi.",
         ],
       },
     },
@@ -618,9 +608,14 @@ export const translations = {
           "Trajnim i thellë në teknologji dhe praktika më të mira të zhvillimit modern front-end. Mbuloi dizajn responsive, korniza moderne dhe parime të përvojës së përdoruesit.",
       },
       efset: {
-        title: "Certifikata Anglisht EF SET (C2 I Përkryer)",
+        title: "Certifikata Anglisht EF SET (C2 I Perkryer)",
         description:
           "Certifikuar nivel C2 (I Perkryer) ne aftesine e gjuhes angleze.",
+      },
+      digitalMarketing: {
+        title: "Bazat e Marketingut Dixhital",
+        description:
+          "Perfundova nje kurs online qe mbulon konceptet baze ne marketingun dixhital.",
       },
     },
     projects: {
@@ -696,7 +691,8 @@ export const translations = {
         ],
       },
       uavAnalyzer: {
-        title: "Analizues i Baterisë dhe Performancës së Fluturimit të UAV-it Prototip",
+        title:
+          "Analizues i Baterisë dhe Performancës së Fluturimit të UAV-it Prototip",
         category: "Projekte AI | Analiza UAV",
         description:
           "Një aplikacion profesional për inxhinierët e dronëve dhe operatorët e UAV-ve për të modeluar me saktësi konsumimin e baterisë, kohën e fluturimit dhe efikasitetin.",
@@ -725,7 +721,8 @@ export const translations = {
         ],
       },
       droneCamera: {
-        title: "Prototip i Vendosjes së Kamerës së Dronit dhe Efekteve të Ngarkesës",
+        title:
+          "Prototip i Vendosjes së Kamerës së Dronit dhe Efekteve të Ngarkesës",
         category: "Projekte AI | Prototip Simulimi",
         description:
           "I prototipuar me Figma Make, ky aplikacion teston vendosjen e kamerës së dronit dhe efektet e ngarkesës, vizualizon mbulimin, simulon mjedise dhe ofron analiza performance.",
@@ -850,8 +847,7 @@ export const translations = {
       kimiUmbauten: {
         title: "KIMI Umbauten - Faqe Moderne",
         category: "Projektet AI | Zhvillim Web",
-        description:
-          "Një faqe moderne dhe responsive e ndërtuar me Bolt.new.",
+        description: "Një faqe moderne dhe responsive e ndërtuar me Bolt.new.",
         longDescription:
           "Dëshmon aftësinë për të krijuar faqe profesionale me dizajn të pastër, layout-e responsive dhe seksione interaktive.",
         features: [
@@ -935,7 +931,8 @@ export const translations = {
       hamLog: {
         title: "Ham-Log Gruppe - Faqe Front End",
         category: "Zhvillim Web",
-        description: "Një projekt uebi i krijuar për të përmbushur nevojat e biznesit të klientit.",
+        description:
+          "Një projekt uebi i krijuar për të përmbushur nevojat e biznesit të klientit.",
         longDescription: "I fokusuar në paraqitje të pastër dhe thjeshtësi.",
         features: ["E përshtatur sipas nevojave të biznesit"],
       },
@@ -950,7 +947,8 @@ export const translations = {
       klinaku: {
         title: "Klinaku & Associates - Faqe Uebi",
         category: "Zhvillim Web",
-        description: "Një faqe e përshtatur posaçërisht për nevojat e klientit.",
+        description:
+          "Një faqe e përshtatur posaçërisht për nevojat e klientit.",
         longDescription:
           "Edhe pse nuk është më aktive, kjo punë demonstron dizajn responsive, layout-e të pastra dhe elemente interaktive të krijuara për një prezencë profesionale online.",
         features: ["E përshtatur sipas kërkesave të klientit"],
@@ -973,7 +971,8 @@ export const translations = {
       sending: "Duke dërguar...",
       sent: "U dërgua!",
       success: "Mesazhi u dërgua me sukses! Do të kthehem tek ju së shpejti.",
-      error: "Diçka shkoi keq gjatë dërgimit të mesazhit. Ju lutem provoni përsëri.",
+      error:
+        "Diçka shkoi keq gjatë dërgimit të mesazhit. Ju lutem provoni përsëri.",
       connectWith: "Lidhuni me Mua",
       connectSubtitle: "Më gjeni në platforma të tjera",
       linkedin: "LinkedIn",

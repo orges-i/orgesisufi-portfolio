@@ -67,11 +67,11 @@ export function CertificationsPage() {
       featured: false,
     },
     {
-      title: 'Digital Marketing Fundamentals',
+      title: t('certifications.digitalMarketing.title'),
       issuer: 'MTF Institute',
       logo: mtfLogo,
       date: '2023',
-      description: 'Completed online course covering basic concepts in digital marketing.',
+      description: t('certifications.digitalMarketing.description'),
       skills: [
         'Digital Marketing Fundamentals',
         'Landing Page Basics / Optimization',
