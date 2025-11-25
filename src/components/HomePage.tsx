@@ -52,8 +52,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   const eduflowTechnologies = [
     "Claude Sonnet",
-    "Figma",
-    "Make",
+    "Figma Make",
     "Lovable",
     "Bolt V2",
     "Supabase",

@@ -124,7 +124,7 @@ export const translations = {
       efset: {
         title: "EF SET English Certificate (C2 Proficient)",
         description:
-          "Certified C2 level (Proficient) in English language proficiency. Demonstrates advanced English communication skills for professional and academic contexts.",
+          "Certified C2 level (Proficient) in English language proficiency.",
       },
     },
     projects: {
@@ -620,7 +620,7 @@ export const translations = {
       efset: {
         title: "Certifikata Anglisht EF SET (C2 I Përkryer)",
         description:
-          "Certifikuar nivel C2 (I Përkryer) në aftësinë e gjuhës angleze. Demonstron aftësi të avancuara komunikimi në anglisht për kontekste profesionale dhe akademike.",
+          "Certifikuar nivel C2 (I Perkryer) ne aftesine e gjuhes angleze.",
       },
     },
     projects: {

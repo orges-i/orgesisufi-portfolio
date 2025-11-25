@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import fmaLogo from '../assets/fmalogo.png';
 import cacttusLogo from '../assets/cactuslogo.png';
+import mtfLogo from '../assets/mtfinstitute.png';
 import { Link } from 'react-router-dom';
 
 export function CertificationsPage() {
@@ -50,8 +51,7 @@ export function CertificationsPage() {
         'Bootstrap',
         'jQuery',
         'Responsive Design',
-        'Cross-browser Compatibility',
-        'Web Standards',
+        'Website Testing and Deployment',
       ],
       certificateUrl: 'https://drive.google.com/file/d/1wJFYfvbDJwRKORN2GM2KPyRAIW29_jGl/view',
       featured: false,
@@ -64,6 +64,21 @@ export function CertificationsPage() {
       description: t('certifications.efset.description'),
       skills: ['English Language', 'Written Communication', 'Verbal Communication'],
       certificateUrl: 'https://cert.efset.org/Yr5AoT',
+      featured: false,
+    },
+    {
+      title: 'Digital Marketing Fundamentals',
+      issuer: 'MTF Institute',
+      logo: mtfLogo,
+      date: '2023',
+      description: 'Completed online course covering basic concepts in digital marketing.',
+      skills: [
+        'Digital Marketing Fundamentals',
+        'Landing Page Basics / Optimization',
+        'A/B Testing Awareness',
+        'Social Media & Email Marketing Awarness',
+      ],
+      certificateUrl: 'https://drive.google.com/file/d/1w4prs1EB0lJrk35KC2X2XQ3c-yW6ZFPU/view',
       featured: false,
     },
   ];

@@ -17,7 +17,7 @@ export function SkillsPage() {
         'Generative AI',
         'App Development',
         'AI-Powered SaaS Development',
-        'No-Code & Low-Code Development with AI',
+        'AI Development for Web & SaaS Applications',
         'Prompt Engineering & LLM Reasoning'
       ],
     },
