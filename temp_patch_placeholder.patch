@@ -1,0 +1,6 @@
+*** Begin Patch
+*** Update File: src/components/ProjectsPage.tsx
+@@
+-import flowThumbnail from "../assets/flowthumbnail.png";
++import flowThumbnail from "../assets/flowthumbnail.png";
+*** End Patch

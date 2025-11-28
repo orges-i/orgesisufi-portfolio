@@ -393,13 +393,13 @@ export const translations = {
         title: "Bleta - E-commerce Web App (University Lab Project)",
         category: "Web Development",
         description:
-          "A full-featured e-commerce web application developed as part of a university lab course at UBT.",
+          "A full-stack e-commerce web app built for Lab Course 2, deployed on Vercel.",
         longDescription:
-          "This project demonstrates full-stack development, product management, and user interaction with a robust architecture.",
+          "Customers browse products, manage carts, and complete checkout with Stripe in Test Mode; admins manage catalog and order statuses. Built with React (Vite), Tailwind, Axios, Node/Express, MongoDB (Mongoose), JWT auth, and Stripe Checkout; deployed on Vercel.",
         features: [
-          "Product catalog and management",
-          "Shopping cart and checkout system",
-          "User authentication flows",
+          "JWT authentication with secure sign-up/login",
+          "Persistent cart, checkout flow, and Stripe test payments with order verification",
+          "Admin dashboard for products and order status updates",
         ],
       },
       newBornMedia: {
@@ -890,13 +890,13 @@ export const translations = {
         title: "Bleta - Aplikacion E-commerce (Projekt Laboratori)",
         category: "Zhvillim Web",
         description:
-          "Një aplikacion i plotë e-commerce i zhvilluar si pjesë e një kursi laboratori në UBT.",
+          "Një aplikacion e-commerce full-stack për lëndën Lab Course 2, i deploy-uar në Vercel.",
         longDescription:
-          "Ky projekt demonstron zhvillim full-stack, menaxhim produktesh dhe ndërveprim të përdoruesit me një arkitekturë të fuqishme.",
+          "Përdoruesit shfletojnë produkte, menaxhojnë shportën dhe kryejnë pagesa testuese me Stripe; admin menaxhon katalogun dhe statuset e porosive. Ndërtuar me React (Vite), Tailwind, Axios, Node/Express, MongoDB (Mongoose), JWT auth dhe Stripe Checkout; i deploy-uar në Vercel.",
         features: [
-          "Katalog dhe menaxhim produktesh",
-          "Shportë blerjesh dhe proces pagesash",
-          "Autentifikim përdoruesish",
+          "Autentifikim JWT me regjistrim/hyrje të sigurt",
+          "Shportë persistente, checkout dhe pagesa testuese Stripe me verifikim porosish",
+          "Panel admin për produktet dhe përditësimin e statuseve të porosive",
         ],
       },
       newBornMedia: {

@@ -1,0 +1,24 @@
+*** Begin Patch
+*** Update File: src/utils/translations.ts
+@@
+       bleta: {
+         title: "Bleta - Aplikacion E-commerce (Projekt Laboratori)",
+         category: "Zhvillim Web",
+-        description:
+-          "Një aplikacion i plotë e-commerce i zhvilluar si pjesë e një kursi laboratori në UBT.",
+-        longDescription:
+-          "Ky projekt demonstron zhvillim full-stack, menaxhim produktesh dhe ndërveprim të përdoruesit me një arkitekturë të fuqishme.",
++        description:
++          "Një aplikacion e-commerce full-stack për lëndën Lab Course 2, i deploy-uar në Vercel.",
++        longDescription:
++          "Përdoruesit shfletojnë produkte, menaxhojnë shportën dhe kryejnë pagesa testuese me Stripe; admin menaxhon katalogun dhe statuset e porosive. Ndërtuar me React (Vite), Tailwind, Axios, Node/Express, MongoDB (Mongoose), JWT auth dhe Stripe Checkout; i deploy-uar në Vercel.",
+         features: [
+-          "Katalog dhe menaxhim produktesh",
+-          "Shportë blerjesh dhe proces pagesash",
+-          "Autentifikim përdoruesish",
++          "Autentifikim JWT me regjistrim/hyrje të sigurt",
++          "Shportë persistente, checkout dhe pagesa testuese Stripe me verifikim porosish",
++          "Panel admin për produktet dhe përditësimin e statuseve të porosive",
+         ],
+       },
+*** End Patch

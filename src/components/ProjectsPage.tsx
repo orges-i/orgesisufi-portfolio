@@ -231,6 +231,42 @@ export function ProjectsPage() {
         demoUrl: "https://v0-bpmb-ody-whats-app-store.vercel.app/",
       },
 
+      // Bleta E-commerce Web App
+      {
+        title: t("projects.bleta.title"),
+        category: t("projects.bleta.category"),
+        groups: ["Web Development", "All Projects"],
+        description: t("projects.bleta.description"),
+        longDescription: t("projects.bleta.longDescription"),
+        image: bletaThumbnail,
+        demoUrl: "https://ecommerce-lab2-frontend.vercel.app/",
+        technologies: [
+          "React (Vite)",
+          "React Router DOM",
+          "Tailwind CSS",
+          "Axios",
+          "Node.js/Express",
+          "MongoDB (Mongoose)",
+          "JWT Auth",
+          "Stripe Checkout",
+          "Vercel",
+        ],
+        features: [
+          <>
+            <Lock className="inline mr-2 text-primary" size={20} />
+            {t("projects.bleta.features")[0]}
+          </>,
+          <>
+            <ShoppingCart className="inline mr-2 text-primary" size={24} />
+            {t("projects.bleta.features")[1]}
+          </>,
+          <>
+            <Layers className="inline mr-2 text-primary" size={20} />
+            {t("projects.bleta.features")[2]}
+          </>,
+        ],
+      },
+
       {
         title: t("projects.uavAnalyzer.title"),
         category: t("projects.uavAnalyzer.category"),
@@ -755,32 +791,6 @@ export function ProjectsPage() {
           </>,
         ],
         demoUrl: "https://orges-i.github.io/victoriatours/",
-      },
-
-      // Bleta E-commerce Web App (added)
-      {
-        title: t("projects.bleta.title"),
-        category: t("projects.bleta.category"),
-        groups: ["Web Development", "All Projects"],
-        description: t("projects.bleta.description"),
-        longDescription: t("projects.bleta.longDescription"),
-        image: bletaThumbnail,
-        technologies: ["MongoDB", "Express.js", "React (Vite)", "Node.js"],
-        features: [
-          <>
-            <Layers className="inline mr-2 text-primary" size={16} />
-            {t("projects.bleta.features")[0]}
-          </>,
-          <>
-            <ShoppingCart className="inline mr-2 text-primary" size={16} />
-            {t("projects.bleta.features")[1]}
-          </>,
-          <>
-            <Lock className="inline mr-2 text-primary" size={16} />
-            {t("projects.bleta.features")[2]}
-          </>,
-        ],
-        statusBadge: t("projects.inProcess"),
       },
 
       // New Born Media Full Stack Web App (added)
