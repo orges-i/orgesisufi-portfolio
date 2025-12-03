@@ -2069,7 +2069,7 @@
   --card-foreground: #fff;
   --popover: #13131a;
   --popover-foreground: #fff;
-  --primary: #6366f1;
+  --primary: #1f6feb;
   --primary-foreground: #fff;
   --secondary: #1e1e2e;
   --secondary-foreground: #fff;
@@ -2085,56 +2085,56 @@
   --switch-background: #2d2d3f;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #6366f1;
-  --chart-1: #6366f1;
-  --chart-2: #8b5cf6;
-  --chart-3: #a855f7;
-  --chart-4: #d946ef;
-  --chart-5: #ec4899;
+  --ring: #1f6feb;
+  --chart-1: #1f6feb;
+  --chart-2: #2a85ff;
+  --chart-3: #3fa0ff;
+  --chart-4: #5ab7ff;
+  --chart-5: #84d1ff;
   --radius: .75rem;
   --sidebar: #13131a;
   --sidebar-foreground: #fff;
-  --sidebar-primary: #6366f1;
+  --sidebar-primary: #1f6feb;
   --sidebar-primary-foreground: #fff;
   --sidebar-accent: #1e1e2e;
   --sidebar-accent-foreground: #fff;
   --sidebar-border: #ffffff1a;
-  --sidebar-ring: #6366f1;
-  --gradient-start: #6366f1;
-  --gradient-middle: #8b5cf6;
-  --gradient-end: #d946ef;
+  --sidebar-ring: #1f6feb;
+  --gradient-start: #1f6feb;
+  --gradient-middle: #2a85ff;
+  --gradient-end: #5ab7ff;
 }
 
 .light {
-  --background: #fff;
+  --background: #f0efea;
   --foreground: #0a0a0f;
-  --card: #fff;
+  --card: #f0efea;
   --card-foreground: #0a0a0f;
-  --popover: #fff;
+  --popover: #f0efea;
   --popover-foreground: #0a0a0f;
-  --primary: #6366f1;
+  --primary: #1f6feb;
   --primary-foreground: #fff;
-  --secondary: #f4f4f5;
+  --secondary: #e7e4dc;
   --secondary-foreground: #0a0a0f;
-  --muted: #f4f4f5;
+  --muted: #e7e4dc;
   --muted-foreground: #71717a;
-  --accent: #f4f4f5;
+  --accent: #e7e4dc;
   --accent-foreground: #0a0a0f;
   --destructive: #ef4444;
   --destructive-foreground: #fff;
   --border: #0000001a;
   --input: #0000000d;
-  --input-background: #f9fafb;
-  --switch-background: #e4e4e7;
-  --ring: #6366f1;
-  --sidebar: #f9fafb;
+  --input-background: #f5f3ed;
+  --switch-background: #e3dfd6;
+  --ring: #1f6feb;
+  --sidebar: #f0efea;
   --sidebar-foreground: #0a0a0f;
-  --sidebar-primary: #6366f1;
+  --sidebar-primary: #1f6feb;
   --sidebar-primary-foreground: #fff;
-  --sidebar-accent: #f4f4f5;
+  --sidebar-accent: #e7e4dc;
   --sidebar-accent-foreground: #0a0a0f;
   --sidebar-border: #0000001a;
-  --sidebar-ring: #6366f1;
+  --sidebar-ring: #1f6feb;
 }
 
 html {
@@ -2507,3 +2507,4 @@ a,
 .cursor-pointer * {
   cursor: pointer !important;
 }
+
