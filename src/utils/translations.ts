@@ -1,4 +1,4 @@
-export const translations = {
+﻿export const translations = {
   en: {
     nav: {
       home: "Home",
@@ -35,7 +35,7 @@ export const translations = {
       paragraph3:
         "My goal is to bridge the gap between traditional web development and cutting-edge AI, creating innovative SaaS products that deliver real value. I'm always eager to learn, collaborate, and take on new challenges in AI, web development, and e-commerce.",
       education: "Education",
-      degree: "Computer Science",
+      degree: "Computer Science and Engineering",
       degreeText: "Bachelor's Degree | Web Programming",
       university: "UBT - University for Business and Technology",
       location: "Pristina, Kosovo",
@@ -526,7 +526,7 @@ export const translations = {
       paragraph3:
         "Qëllimi im është të ndërtoj një urë midis zhvillimit tradicional të uebit dhe inteligjencës artificiale, duke krijuar produkte inovative SaaS që ofrojnë vlerë të vërtetë. Jam gjithmonë i etur për të mësuar, për të bashkëpunuar dhe për të marrë sfida të reja në fushën e inteligjencës artificiale, zhvillimit të uebit dhe e-commerce.",
       education: "Arsimimi",
-      degree: "Shkenca Kompjuterike",
+      degree: "Shkenca Kompjuterike dhe Inxhinieri",
       degreeText: "Bachelor's Degree | Ueb Programim",
       university: "UBT - Universiteti për Biznes dhe Teknologji",
       location: "Prishtinë, Kosovë",
