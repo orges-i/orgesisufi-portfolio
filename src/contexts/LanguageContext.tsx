@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+﻿import { createContext, useContext, useState, ReactNode } from 'react';
 import { translations } from '../utils/translations';
 
 type Language = 'en' | 'sq';
@@ -17,19 +17,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const t = (key: string): string => {
     const keys = key.split('.');
     let value: any = translations[language];
-    
+
     for (const k of keys) {
       value = value?.[k];
     }
-    
-    if (typeof value === 'string') {
-      // Clean up any encoding artifacts that may be present in translation text
-      return value
-        .replaceAll('�?"', '–')
-        .replaceAll('pǮr', 'për');
-    }
-    
-    return value || key;
+
+    return typeof value === 'string' ? value : value || key;
   };
 
   return (
@@ -46,3 +39,6 @@ export function useLanguage() {
   }
   return context;
 }
+
+// Re-export for clarity to ensure HMR picks up named exports
+export { LanguageContext };
