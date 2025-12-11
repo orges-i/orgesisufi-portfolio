@@ -238,7 +238,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       />
 
       {/* Featured Project Section */}
-      <section className="w-full py-20 bg-card/50">
+      <section className="w-full py-20 bg-card/50" data-nosnippet>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             className="text-center mb-12"
