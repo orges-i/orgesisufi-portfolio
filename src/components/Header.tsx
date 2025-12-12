@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Moon, Sun, Languages } from 'lucide-react';
+import { Menu, X, Moon, Sun, Languages, Download } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import {
@@ -21,6 +21,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
+  const resumeLink = "/Orges-Isufi-Resume.pdf";
 
   const navItems = [
     { name: t('nav.home'), id: 'home' },
@@ -83,10 +84,6 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
 
           {/* Theme Toggle & Language Selector */}
           <div className="flex items-center gap-2">
-            <div
-              aria-hidden="true"
-              className="h-9 w-9 md:w-auto md:px-3 inline-flex items-center justify-center rounded-md invisible"
-            />
             <DropdownMenu>
               <DropdownMenuTrigger className="h-9 w-9 inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 transition-colors">
                 <Languages size={18} />
@@ -113,6 +110,19 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                 {theme === 'dark' ? <Moon size={18} /> : <Sun size={18} />}
               </motion.div>
             </button>
+
+            <motion.a
+              href={resumeLink}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t('common.downloadResume')}
+              className="h-9 w-9 inline-flex items-center justify-center rounded-md border border-primary/40 bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download size={18} />
+            </motion.a>
 
             {/* Mobile Menu Button */}
             <button

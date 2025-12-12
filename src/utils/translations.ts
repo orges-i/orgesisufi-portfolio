@@ -8,6 +8,11 @@
       certifications: "Certifications",
       projects: "Projects",
       contact: "Contact",
+      resume: "Download Resume",
+    },
+    common: {
+      backToTop: "Back to top",
+      downloadResume: "Download Resume",
     },
     home: {
       title: "Orges Isufi",
@@ -499,6 +504,11 @@
       certifications: "Certifikatat",
       projects: "Projektet",
       contact: "Kontakti",
+      resume: "Shkarko CV-në",
+    },
+    common: {
+      backToTop: "Kthehu lart",
+      downloadResume: "Shkarko CV-në",
     },
     home: {
       title: "Orges Isufi",
