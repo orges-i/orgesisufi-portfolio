@@ -1,6 +1,7 @@
 import {
   Linkedin,
   Mail,
+  Download,
   // Github,
 } from "lucide-react";
 import { motion } from "motion/react";
@@ -54,6 +55,19 @@ export function Footer() {
             >
               <Mail size={20} />
               <span>Email</span>
+            </motion.a>
+            <motion.a
+              href="/Orges-Isufi-Resume.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              title={t("nav.resume")}
+            >
+              <Download size={20} />
+              <span>{t("nav.resume")}</span>
             </motion.a>
           </div>
         </div>
