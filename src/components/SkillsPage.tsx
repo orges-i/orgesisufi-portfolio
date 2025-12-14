@@ -18,7 +18,8 @@ export function SkillsPage() {
         'App Development',
         'AI-Powered SaaS Development',
         'AI Development for Web & SaaS Applications',
-        'Prompt Engineering & LLM Reasoning'
+        'Prompt Engineering & LLM Reasoning',
+        'Web Design/Prototyping'
       ],
     },
     {
@@ -33,8 +34,7 @@ export function SkillsPage() {
         'jQuery',
         'Responsive Web Design',
         'Front-End Development',
-        'Website Testing and Deployment',
-        'Web Design/Prototyping'
+        'Website Testing and Deployment'
       ],
     },
     {
@@ -54,11 +54,10 @@ export function SkillsPage() {
   ];
 
   const additionalTools = [
-    'Supabase',
-    'Canva',
+    'Canva fundamentals',
+    'Figma fundamentals',
     'Notion',
-    'Trello',
-    'Asana',
+    'Trello & Asana',
     'Hands-on Windows troubleshooting and support'
   ];
 
