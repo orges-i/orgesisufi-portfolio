@@ -367,15 +367,6 @@
           "Branded, polished UI components",
         ],
       },
-      oliveMedical: {
-        title: "Olive Medical - Website Prototype Demo",
-        category: "AI Projects | Web Development",
-        description:
-          "A demo website built quickly with Bolt.new for presentation to a client.",
-        longDescription:
-          "This project showcases a clean, responsive design with interactive sections, highlighting workflow for rapid web design and prototyping.",
-        features: ["Quick client presentation", "Fully responsive layout"],
-      },
       emryShowell: {
         title: "Emry Showell - Business Website",
         category: "Web Development",
@@ -864,18 +855,6 @@
           "Hartë e saktë për shërbimet në terren",
           "Përshtatet në çdo pajisje",
           "Komponentë UI të personalizuar për markën",
-        ],
-      },
-      oliveMedical: {
-        title: "Olive Medical - Demo e Faqes",
-        category: "Projektet AI | Zhvillim Web",
-        description:
-          "Një faqe demo e ndërtuar shpejt me Bolt.new për ta prezantuar te klienti.",
-        longDescription:
-          "Tregon dizajn të pastër, responsive dhe seksione interaktive, duke nxjerrë në pah rrjedhën e shpejtë të prototipimit.",
-        features: [
-          "Prezantim i shpejtë për klientin",
-          "Layout plotësisht responsive",
         ],
       },
       emryShowell: {

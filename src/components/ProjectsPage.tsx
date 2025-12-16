@@ -50,7 +50,6 @@ import akCarShopThumbnail from "../assets/carshopthumbnail.png";
 import duobassThumbnail from "../assets/duobassthumbnail.png";
 import caplombierThumbnail from "../assets/caplombierthumbnail.png";
 import kimiumbautenThumbnail from "../assets/kimiumbauten.png";
-import oliveThumbnail from "../assets/olivethumbnail.png";
 import emryShowellThumbnail from "../assets/emryshowellthumbnail.png";
 import victoriaToursThumbnail from "../assets/victoriatoursthumbnail.png";
 import klinakuThumbnail from "../assets/klinakuthumbnail.png";
@@ -733,29 +732,6 @@ export function ProjectsPage() {
         statusBadge: t("projects.inProcess"),
       },
       */
-
-      // Olive Medical Website Prototype Demo (added)
-      {
-        title: t("projects.oliveMedical.title"),
-        category: t("projects.oliveMedical.category"),
-        groups: ["AI Projects", "Web Development", "All Projects"],
-        description: t("projects.oliveMedical.description"),
-        longDescription: t("projects.oliveMedical.longDescription"),
-        image: oliveThumbnail,
-        technologies: ["Bolt.new", "React", "Tailwind CSS"],
-        features: [
-          <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />
-            {t("projects.oliveMedical.features")[0]}
-          </>,
-          <>
-            <Smartphone className="inline mr-2 text-primary" size={16} />
-            {t("projects.oliveMedical.features")[1]}
-          </>,
-        ],
-        demoUrl: "https://olivemedicalversion2.netlify.app/",
-        statusBadge: t("projects.inProcess"),
-      },
 
       // Emry Showell Web Experience (added)
       {
