@@ -57,18 +57,22 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           </motion.button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div
+            className="hidden md:flex items-center"
+            style={{ gap: "1.5rem" }}
+          >
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`uppercase tracking-widest font-normal text-base transition-colors relative cursor-pointer ${
+                className={`tracking-[0.06em] font-normal text-sm transition-colors relative cursor-pointer whitespace-nowrap ${
                   currentPage === item.id
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                style={{ textTransform: "uppercase" }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 {item.name}
                 {currentPage === item.id && (
@@ -150,11 +154,12 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                   <motion.button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`uppercase tracking-widest font-normal text-base text-left px-2 py-2 rounded-lg transition-colors cursor-pointer ${
+                    className={`tracking-[0.06em] font-normal text-sm text-left px-2 py-2 rounded-lg transition-colors cursor-pointer ${
                       currentPage === item.id
                         ? "text-primary bg-primary/10"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent"
                     }`}
+                    style={{ textTransform: "uppercase" }}
                     whileTap={{ scale: 0.98 }}
                   >
                     {item.name}
