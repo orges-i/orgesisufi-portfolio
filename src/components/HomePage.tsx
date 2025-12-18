@@ -117,7 +117,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             >
               <motion.div className="mb-1">
                 <motion.h1
-                  className={`${isDark ? "text-white" : "text-gray-900"}`}
+                  className="text-foreground"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
@@ -135,9 +135,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     fontStyle: "normal",
                     marginBottom: "1rem",
                     whiteSpace: "nowrap",
-                    textShadow: isDark
-                      ? "0 2px 10px rgba(0,0,0,0.3)"
-                      : "0 2px 10px rgba(0,0,0,0.1)",
                   }}
                 >
                   {t("home.title")}
@@ -145,9 +142,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </motion.div>
 
               <motion.h2
-                className={`font-normal text-center ${
-                  isDark ? "text-white" : "text-gray-900"
-                }`}
+                className="font-normal text-center text-foreground"
                 style={{
                   fontSize: "clamp(18px, 4.5vw, 32px)",
                   lineHeight: "1.3",
@@ -155,9 +150,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   marginBottom: "2rem",
                   padding: "0 0.5rem",
                   fontWeight: 400,
-                  textShadow: isDark
-                    ? "0 2px 10px rgba(0,0,0,0.3)"
-                    : "0 2px 10px rgba(0,0,0,0.1)",
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -167,9 +159,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </motion.h2>
 
               <motion.p
-                className={`max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-2 ${
-                  isDark ? "text-gray-300" : "text-gray-600"
-                }`}
+                className="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-2 text-muted-foreground"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
