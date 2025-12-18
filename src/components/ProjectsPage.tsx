@@ -60,6 +60,7 @@ import milkyWayThumbnail from "../assets/milkywaythumbnail.png";
 import hamLogThumbnail from "../assets/hamlogthumbnail.png";
 import mobileriaErioniThumbnail from "../assets/mobileriaerionithumbnail.png";
 import uavThumbnail from "../assets/uavthumbnail.png";
+import lynkrThumbnail from "../assets/lynkrthumbnail.png";
 import developer1 from "../assets/developerportfolio1.png";
 import developer2 from "../assets/developerportfolio2.png";
 import developer3 from "../assets/developerportfolio3.png";
@@ -187,6 +188,52 @@ export function ProjectsPage() {
             {t("projects.recbase.features")[2]}
           </>,
         ],
+      },
+
+      {
+        title: t("projects.lynkr.title"),
+        category: t("projects.lynkr.category"),
+        groups: ["AI Projects", "Web Development", "All Projects"],
+        description: t("projects.lynkr.description"),
+        longDescription: t("projects.lynkr.longDescription"),
+        image: lynkrThumbnail,
+        technologies: [
+          "Antigravity",
+          "Google AI Studio",
+          "Gemini 3.0 Pro & Flash",
+          "Supabase PostgreSQL",
+          "React",
+          "Tailwind CSS",
+          "ThreeJs",
+          "Supabase Auth & Storage",
+        ],
+        features: [
+          <>
+            <GripHorizontal className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[0]}
+          </>,
+          <>
+            <Paintbrush className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[1]}
+          </>,
+          <>
+            <Layers className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[2]}
+          </>,
+          <>
+            <Link2 className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[3]}
+          </>,
+          <>
+            <Gauge className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[4]}
+          </>,
+          <>
+            <Database className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.lynkr.features")[5]}
+          </>,
+        ],
+        statusBadge: t("projects.inProcess"),
       },
 
       {

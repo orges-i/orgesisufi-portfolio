@@ -202,6 +202,22 @@
           "Comprehensive user role management and access control",
         ],
       },
+      lynkr: {
+        title: "LYNKR | Link-in-Bio Fullstack SaaS Platform",
+        category: "AI Projects | Web Development",
+        description:
+          "LYNKR is a link-in-bio platform that lets users create a single page with multiple links, similar to Linktree. It combines a modern React and TypeScript frontend with a Supabase backend for authentication, storage, and data handling.",
+        longDescription:
+          "The platform includes real-time editing, visual customization, and basic analytics features. It is built using modern full-stack practices to provide a scalable and interactive experience.",
+        features: [
+          "Drag-and-drop editor for real-time layout tweaks",
+          "Instant preview for colors, fonts, and styles",
+          "Stunning UI with 3D backgrounds and shader effects",
+          "Live sync keeps edits matched between editor and page",
+          "Built-in analytics for clicks, visitors, and traffic",
+          "Supabase-backed auth and storage with a responsive UI",
+        ],
+      },
       uavAnalyzer: {
         title: "UAV Battery & Flight Performance Analyzer Prototype",
         category: "AI Projects | UAV Analytics",
@@ -689,6 +705,22 @@
           "Parsim dhe analizë CV të fuqizuar nga AI",
           "Mjete të avancuara eksportimi dhe raporte",
           "Menaxhim gjithëpërfshirës i roleve të përdoruesve dhe kontrolli i qasjes",
+        ],
+      },
+      lynkr: {
+        title: "LYNKR | Platformë SaaS Link-in-Bio Fullstack",
+        category: "Projekte AI | Zhvillim Web",
+        description:
+          "LYNKR është një platformë link-in-bio që u lejon përdoruesve të krijojnë një faqe të vetme me shumë linke, ngjashëm me Linktree. Kombinon një frontend modern React dhe TypeScript me një backend Supabase për autentifikim, ruajtje dhe menaxhimin e të dhënave.",
+        longDescription:
+          "Platforma përfshin redaktim në kohë reale, personalizim vizual dhe analiza bazike. Është ndërtuar me praktika moderne full-stack për të ofruar një përvojë të shkallëzueshme dhe interaktive.",
+        features: [
+          "Editor drag-and-drop për rregullime të menjëhershme të layout-it",
+          "Parapamje e çastit për ngjyra, fonte dhe stile",
+          "UI mbresëlënëse me sfonda 3D dhe efekte shader",
+          "Sinkronizim live që mban në linjë editorin dhe faqen",
+          "Analitikë e integruar për klikime, vizitorë dhe trafik",
+          "Auth dhe ruajtje me Supabase, UI responsive",
         ],
       },
       uavAnalyzer: {
