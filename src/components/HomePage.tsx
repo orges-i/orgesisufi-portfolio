@@ -81,11 +81,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="w-full">
       <div
-        className={`relative min-h-screen flex items-center justify-center overflow-hidden ${
+        className={`relative flex items-center justify-center overflow-hidden ${
           isDark
             ? "bg-gradient-to-br from-gray-900 to-gray-950"
             : "bg-gradient-to-br from-gray-50 to-gray-100"
         }`}
+        style={{ minHeight: "100vh" }}
       >
         {/* Background Elements - Removed cubes for cleaner design */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -106,10 +107,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
         ></div>
 
         {/* Centered Text Content */}
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              className="space-y-6"
+              className="space-y-8 md:space-y-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -121,18 +122,19 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                   style={{
-                    fontSize: "clamp(50px, 15vw, 80px)",
-                    lineHeight: "1",
-                    minHeight: "80px",
+                    fontSize: "clamp(28px, 14vw, 96px)",
+                    lineHeight: "1.1",
+                    minHeight: "auto",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     fontFamily: '"Playfair Display", serif',
                     fontWeight: 800,
                     textTransform: "uppercase",
-                    letterSpacing: "1px",
-                    fontStyle: "italic",
-                    marginBottom: "0.5rem",
+                    letterSpacing: "0.5px",
+                    fontStyle: "normal",
+                    marginBottom: "1rem",
+                    whiteSpace: "nowrap",
                     textShadow: isDark
                       ? "0 2px 10px rgba(0,0,0,0.3)"
                       : "0 2px 10px rgba(0,0,0,0.1)",
@@ -147,11 +149,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   isDark ? "text-white" : "text-gray-900"
                 }`}
                 style={{
-                  fontSize: "clamp(18px, 5vw, 32px)",
-                  lineHeight: "1.2",
-                  marginTop: "1.5rem",
-                  marginBottom: "1.5rem",
-                  padding: "0 1rem",
+                  fontSize: "clamp(18px, 4.5vw, 32px)",
+                  lineHeight: "1.3",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  padding: "0 0.5rem",
                   fontWeight: 400,
                   textShadow: isDark
                     ? "0 2px 10px rgba(0,0,0,0.3)"
@@ -165,7 +167,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </motion.h2>
 
               <motion.p
-                className={`max-w-2xl mx-auto text-lg leading-relaxed ${
+                className={`max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-2 ${
                   isDark ? "text-gray-300" : "text-gray-600"
                 }`}
                 initial={{ opacity: 0, y: 20 }}
