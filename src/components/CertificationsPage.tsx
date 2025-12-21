@@ -81,7 +81,7 @@ export function CertificationsPage() {
         'Incident Management & Escalation',
         'IT Security Fundamentals',
       ],
-      certificateUrl: 'https://drive.google.com/file/d/1GZ-pZdoxdke8K0YMJVm6_Knp_H_f84-H/view?usp=sharing',
+      certificateUrl: 'https://www.udemy.com/certificate/UC-85c88634-f7eb-426e-8be3-3e2cd25b254f/',
       featured: false,
     },
     {
