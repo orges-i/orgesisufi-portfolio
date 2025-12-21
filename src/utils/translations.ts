@@ -125,6 +125,12 @@
         description:
           "Certified C2 level (Proficient) in English language proficiency.",
       },
+      itSupport: {
+        title:
+          "IT & Technical Support: Helpdesk, Desktop & Servers (Crash Overview)",
+        description:
+          "Completed a concise, knowledge-focused overview of IT technical support across helpdesk, desktop, and server environments. Covered IT support levels, troubleshooting fundamentals, SLAs, data protection, hardware, legacy systems, virtualisation, incident management, and backup strategies. This course provides a broad understanding rather than hands-on practice - ideal for building foundational knowledge and professional context in IT support.",
+      },
       digitalMarketing: {
         title: "Digital Marketing Fundamentals",
         description:
@@ -628,6 +634,12 @@
         title: "Certifikata Anglisht EF SET (C2 I Perkryer)",
         description:
           "Certifikuar nivel C2 (I Perkryer) ne aftesine e gjuhes angleze.",
+      },
+      itSupport: {
+        title:
+          "Mbështetje IT & Teknike: Helpdesk, Desktop & Servera (Përmbledhje e Shpejtë)",
+        description:
+          "Përfundova një përmbledhje të përqendruar në njohuri mbi mbështetjen teknike IT përmes helpdesk, desktop dhe mjediseve të serverave. Mbuluar nivelet e mbështetjes IT, bazat e zgjidhjes së problemeve, SLA-të, mbrojtjen e të dhënave, hardware, sistemet e vjetra, virtualizimin, menaxhimin e incidenteve dhe strategjitë e backup-it. Ky kurs ofron një kuptim të gjerë dhe jo praktik - ideal për të ndërtuar bazën njohurive dhe kontekstin profesional në mbështetje IT.",
       },
       digitalMarketing: {
         title: "Bazat e Marketingut Dixhital",

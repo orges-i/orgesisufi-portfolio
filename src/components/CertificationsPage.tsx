@@ -6,6 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import fmaLogo from '../assets/fmalogo.png';
 import cacttusLogo from '../assets/cactuslogo.png';
 import mtfLogo from '../assets/mtfinstitute.png';
+import udemyLogo from '../assets/udemylogo.png';
 import { Link } from 'react-router-dom';
 
 export function CertificationsPage() {
@@ -64,6 +65,23 @@ export function CertificationsPage() {
       description: t('certifications.efset.description'),
       skills: ['English Language', 'Written Communication', 'Verbal Communication'],
       certificateUrl: 'https://cert.efset.org/Yr5AoT',
+      featured: false,
+    },
+    {
+      title: t('certifications.itSupport.title'),
+      issuer: 'Udemy',
+      logo: udemyLogo,
+      date: '2025',
+      description: t('certifications.itSupport.description'),
+      skills: [
+        'IT Support & Troubleshooting',
+        'Desktop & Server Infrastructure',
+        'Data Protection & Backup',
+        'Legacy Systems & Compatibility',
+        'Incident Management & Escalation',
+        'IT Security Fundamentals',
+      ],
+      certificateUrl: 'https://drive.google.com/file/d/1GZ-pZdoxdke8K0YMJVm6_Knp_H_f84-H/view?usp=sharing',
       featured: false,
     },
     {
