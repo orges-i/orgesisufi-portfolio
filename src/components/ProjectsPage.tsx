@@ -153,44 +153,6 @@ export function ProjectsPage() {
       },
 
       {
-        title: t("projects.recbase.title"),
-        category: t("projects.recbase.category"),
-        groups: ["AI Projects", "All Projects"],
-        description: t("projects.recbase.description"),
-        longDescription: t("projects.recbase.longDescription"),
-        image: recbaseThumbnail,
-        previewUrl:
-          "https://drive.google.com/file/d/1qpuOulTt7bxkC4YLK_FLjXVqijqrOhCV/view?usp=sharing",
-        images: [
-          "https://drive.google.com/file/d/1qpuOulTt7bxkC4YLK_FLjXVqijqrOhCV/view?usp=sharing",
-        ],
-        technologies: [
-          "React",
-          "TypeScript",
-          "Tailwind CSS",
-          "Supabase",
-          "Lovable",
-          "AI Integration",
-          "Boolean Search",
-          "Activity Tracking",
-        ],
-        features: [
-          <>
-            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.recbase.features")[0]}
-          </>,
-          <>
-            <FileText className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.recbase.features")[1]}
-          </>,
-          <>
-            <Lock className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.recbase.features")[2]}
-          </>,
-        ],
-      },
-
-      {
         title: t("projects.lynkr.title"),
         category: t("projects.lynkr.category"),
         groups: ["AI Projects", "Web Development", "All Projects"],
@@ -233,7 +195,46 @@ export function ProjectsPage() {
             {t("projects.lynkr.features")[5]}
           </>,
         ],
+        demoUrl: "https://lynkr-flame.vercel.app/",
         statusBadge: t("projects.inProcess"),
+      },
+
+      {
+        title: t("projects.recbase.title"),
+        category: t("projects.recbase.category"),
+        groups: ["AI Projects", "All Projects"],
+        description: t("projects.recbase.description"),
+        longDescription: t("projects.recbase.longDescription"),
+        image: recbaseThumbnail,
+        previewUrl:
+          "https://drive.google.com/file/d/1qpuOulTt7bxkC4YLK_FLjXVqijqrOhCV/view?usp=sharing",
+        images: [
+          "https://drive.google.com/file/d/1qpuOulTt7bxkC4YLK_FLjXVqijqrOhCV/view?usp=sharing",
+        ],
+        technologies: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "Lovable",
+          "AI Integration",
+          "Boolean Search",
+          "Activity Tracking",
+        ],
+        features: [
+          <>
+            <Sparkles className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[0]}
+          </>,
+          <>
+            <FileText className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[1]}
+          </>,
+          <>
+            <Lock className="inline mr-2 text-primary" size={16} />{" "}
+            {t("projects.recbase.features")[2]}
+          </>,
+        ],
       },
 
       {
