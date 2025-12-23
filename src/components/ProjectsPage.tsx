@@ -14,7 +14,6 @@ import {
   MapPin,
   Gauge,
   Camera,
-  Radar,
   Layers,
   Leaf,
   Globe,
@@ -42,7 +41,6 @@ import developerThumbnail from "../assets/developerportfoliothumbnail.png";
 import recbaseThumbnail from "../assets/recbasethumbnail.png";
 // import pocketbalanceThumbnail from "../assets/pocketbalancethumbnail.png";
 import bpmbodyThumbnail from "../assets/bpmbodythumnail.png";
-import droneCameraThumbnail from "../assets/dronecamerathumbnail.png";
 import zvrichThumbnail from "../assets/zvrichthumbnail.png";
 import plantlyThumbnail from "../assets/plantlythumbnail.png";
 // import flowThumbnail from "../assets/flowthumbnail.png";
@@ -605,54 +603,6 @@ export function ProjectsPage() {
           </>,
         ],
         demoUrl: "https://ca-plombier-prototyp-e0bl.bolt.host/",
-      },
-
-      {
-        title: t("projects.droneCamera.title"),
-        category: t("projects.droneCamera.category"),
-        groups: ["AI Projects", "All Projects"],
-        description: t("projects.droneCamera.description"),
-        longDescription: t("projects.droneCamera.longDescription"),
-        image: droneCameraThumbnail,
-        previewUrl:
-          "https://drive.google.com/file/d/1wfwLfJyEAv_0BSr9_fSzbRpwZDdYrOSJ/view?usp=sharing",
-        images: [droneCameraThumbnail],
-        technologies: [
-          "Figma Make",
-          "React 18",
-          "TypeScript",
-          "Vite",
-          "Tailwind-style utility classes",
-          "Radix UI",
-          "Lucide icons",
-          "Sonner toasts",
-          "React Hook Form",
-          "Embla carousel utilities",
-        ],
-        features: [
-          <>
-            <Camera className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.droneCamera.features")[0]}
-          </>,
-          <>
-            <Radar className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.droneCamera.features")[1]}
-          </>,
-          <>
-            <Gauge className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.droneCamera.features")[2]}
-          </>,
-          <>
-            <Layers className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.droneCamera.features")[3]}
-          </>,
-          <>
-            <Database className="inline mr-2 text-primary" size={16} />{" "}
-            {t("projects.droneCamera.features")[4]}
-          </>,
-        ],
-        demoUrl: "https://drone-camera-placement-prototype.vercel.app/",
-        statusBadge: t("projects.inProcess"),
       },
 
       {

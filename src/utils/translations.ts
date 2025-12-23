@@ -253,21 +253,6 @@
           "Studio location & hours with Google Maps",
         ],
       },
-      droneCamera: {
-        title: "Drone Camera Placement & Payload Effects Prototype",
-        category: "AI Projects | Simulation Prototype",
-        description:
-          "Prototyped with Figma Make, this app tests drone camera placement and payload effects, visualizes coverage, simulates environments, and provides performance insights.",
-        longDescription:
-          "This browser-based prototype helps drone engineers experiment with camera offsets, payload packages, and mission constraints. It renders live coverage footprints, blind-spot warnings, and environment simulations while tracking time, speed, distance, altitude, and energy usage for better planning.",
-        features: [
-          "Test camera placement & payload effects",
-          "Live coverage radius & area visualization",
-          "Flight performance insights (time, speed, distance, altitude)",
-          "Environment simulator & blind-spot analysis",
-          "Save & manage drone configurations",
-        ],
-      },
       developerThemed: {
         title: "Developer Themed Portfolio Website",
         category: "AI Projects | Web Development",
@@ -763,22 +748,6 @@
           "Dizajn responsive për celular",
           "Shfaqje e produkteve, historisë dhe vlerave",
           "Vendndodhja e studios dhe orari me Google Maps",
-        ],
-      },
-      droneCamera: {
-        title:
-          "Prototip i Vendosjes së Kamerës së Dronit dhe Efekteve të Ngarkesës",
-        category: "Projekte AI | Prototip Simulimi",
-        description:
-          "I prototipuar me Figma Make, ky aplikacion teston vendosjen e kamerës së dronit dhe efektet e ngarkesës, vizualizon mbulimin, simulon mjedise dhe ofron analiza performance.",
-        longDescription:
-          "Ky prototip në shfletues ndihmon ekipet e dronëve të eksperimentojnë me pozicionet e kamerës, peshat e ngarkesës dhe kufizimet e misionit. Ai shfaq në kohë reale rrezet e mbulimit, paralajmërimet për zonat e verbra dhe simulimet mjedisore ndërsa gjurmon kohën, shpejtësinë, distancën, lartësinë dhe konsumimin e energjisë për planifikim më të mirë.",
-        features: [
-          "Teston vendosjen e kamerës dhe efektet e ngarkesës",
-          "Vizualizim live i rrezes dhe zonës së mbulimit",
-          "Analiza performance për kohë, shpejtësi, distancë dhe lartësi",
-          "Simulator mjedisi dhe analizë e pikave të verbra",
-          "Ruajtje dhe menaxhim i konfigurimeve të dronit",
         ],
       },
       developerThemed: {
