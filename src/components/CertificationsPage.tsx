@@ -40,6 +40,21 @@ export function CertificationsPage() {
       featured: true,
     },
     {
+      title: t('certifications.promptEngineering.title'),
+      issuer: 'MTF Institute',
+      logo: mtfLogo,
+      date: '2025',
+      description: t('certifications.promptEngineering.description'),
+      skills: [
+        'Prompt Engineering',
+        'AI Prompt Design',
+        'Large Language Models (LLMs)',
+        'AI Content Generation',
+      ],
+      certificateUrl: 'https://drive.google.com/file/d/1Zj30b1QSkNW-x3hzha1ZsFyFWR_bhENG/view?usp=sharing',
+      featured: false,
+    },
+    {
       title: t('certifications.frontend.title'),
       issuer: 'Cacttus Education',
       logo: cacttusLogo,

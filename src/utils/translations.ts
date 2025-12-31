@@ -115,6 +115,11 @@
         projectDescription:
           "Built a comprehensive AI-powered course creation platform as the capstone project, utilizing multiple AI models and full-stack web technologies.",
       },
+      promptEngineering: {
+        title: "Prompt Engineering",
+        description:
+          "A professional certification assessment focused on evaluating knowledge of prompt engineering techniques used to optimize AI and language model performance.",
+      },
       frontend: {
         title: "Front End Web Development",
         description:
@@ -609,6 +614,11 @@
           "Trajnim gjithëpërfshirës në integrim AI me SaaS dhe zhvillim ueb. U fokusua në përdorimin e modeleve AI, inxhinieri të kërkesave dhe mjeteve moderne zhvillimi për të ndërtuar aplikacione inteligjente.",
         projectDescription:
           "Ndërtova një platformë gjithëpërfshirëse të krijimit të kurseve të fuqizuar nga AI si projekt kulminues, duke përdorur modele të shumta AI dhe teknologji full-stack.",
+      },
+      promptEngineering: {
+        title: "Prompt Engineering",
+        description:
+          "Vleresim profesional certifikimi i fokusuar ne vleresimin e njohurive mbi teknikat e prompt engineering te perdorura per te optimizuar performancen e AI-se dhe modeleve te gjuheve.",
       },
       frontend: {
         title: "Zhvillim Front End Web",
