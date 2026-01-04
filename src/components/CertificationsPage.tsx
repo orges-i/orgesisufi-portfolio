@@ -7,6 +7,7 @@ import fmaLogo from '../assets/fmalogo.png';
 import cacttusLogo from '../assets/cactuslogo.png';
 import mtfLogo from '../assets/mtfinstitute.png';
 import udemyLogo from '../assets/udemylogo.png';
+import forageLogo from '../assets/foragelogo.png';
 import { Link } from 'react-router-dom';
 
 export function CertificationsPage() {
@@ -38,6 +39,26 @@ export function CertificationsPage() {
       projectDescription: t('certifications.aiSpecialist.projectDescription'),
       projectLink: '/projects#eduflow',
       featured: true,
+    },
+    {
+      title: t('certifications.vistaAiInAction.title'),
+      issuer: 'Forage',
+      issuerUrl: 'https://www.theforage.com/',
+      logo: forageLogo,
+      date: 'January 2026',
+      description: t('certifications.vistaAiInAction.description'),
+      skills: [
+        'AI for Data Analysis',
+        'AI Prompting',
+        'Prompt Engineering',
+        'Process Optimization',
+        'Prompt Design',
+        'Competitive Intelligence',
+        'Generative AI',
+      ],
+      certificateUrl:
+        'https://www.theforage.com/completion-certificates/BotenCEjm3LFxtq9A/EregFenDKXDDeTGR2_BotenCEjm3LFxtq9A_695959f6beda68c47321e521_1767483518792_completion_certificate.pdf',
+      featured: false,
     },
     {
       title: t('certifications.promptEngineering.title'),
@@ -194,7 +215,9 @@ export function CertificationsPage() {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{cert.description}</p>
+                  <p className="text-muted-foreground whitespace-pre-line">
+                    {cert.description}
+                  </p>
 
                   <div>
                     <h4 className="text-foreground mb-3">{t('certifications.skillsCovered')}</h4>

@@ -115,6 +115,11 @@
         projectDescription:
           "Built a comprehensive AI-powered course creation platform as the capstone project, utilizing multiple AI models and full-stack web technologies.",
       },
+      vistaAiInAction: {
+        title: "Vista Equity Partners AI in Action Job Simulation (Forage)",
+        description:
+          "Completed a job simulation involving prompt engineering and GenAI workflow automation for Vista's Portfolio Operations team, applying Vista's four-part prompt framework (Ask, Context, Examples, Desired Output) to synthesize customer NPS survey feedback into executive-ready insights, improving clarity and relevance of outputs by > 50% through iteration. Designed and tested repeatable GenAI workflows (news aggregation, data reconciliation, and qualitative insight summarization) using tools such as ChatGPT and Copilot, ensuring accuracy, professional tone, and scalability, and evaluated AI-generated outputs for accuracy, tone, and usefulness by implementing guardrails and refinement techniques that reduced error rates and increased stakeholder usability of results.",
+      },
       promptEngineering: {
         title: "Prompt Engineering",
         description:
@@ -614,6 +619,11 @@
           "Trajnim gjithëpërfshirës në integrim AI me SaaS dhe zhvillim ueb. U fokusua në përdorimin e modeleve AI, inxhinieri të kërkesave dhe mjeteve moderne zhvillimi për të ndërtuar aplikacione inteligjente.",
         projectDescription:
           "Ndërtova një platformë gjithëpërfshirëse të krijimit të kurseve të fuqizuar nga AI si projekt kulminues, duke përdorur modele të shumta AI dhe teknologji full-stack.",
+      },
+      vistaAiInAction: {
+        title: "Vista Equity Partners AI in Action Job Simulation (Forage)",
+        description:
+          "Përfundova një simulim pune që përfshinte inxhinieri të prompt-it dhe automatizim të rrjedhave GenAI për ekipin e Portfolio Operations të Vista, duke zbatuar kornizën me katër pjesë të Vista (Ask, Context, Examples, Desired Output) për të sintetizuar feedback-un e NPS të klientëve në njohuri të gatshme për ekzekutivë, me përmirësim të qartësisë dhe relevancës së rezultateve me > 50% përmes iterimit. Projektova dhe testova rrjedha të përsëritshme GenAI (mbledhje lajmesh, pajtim të të dhënave dhe përmbledhje njohurish cilësore) me mjete si ChatGPT dhe Copilot, duke siguruar saktësi, ton profesional dhe shkallëzim, si dhe vlerësova rezultatet e gjeneruara nga AI për saktësi, ton dhe përdorshmëri; zbatova guardrails dhe teknika rafinimi që ulën normat e gabimeve dhe rritën përdorshmërinë e rezultateve për palët e interesuara.",
       },
       promptEngineering: {
         title: "Prompt Engineering",
