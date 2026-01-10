@@ -234,20 +234,6 @@
           "Supabase-backed auth and storage with a responsive UI",
         ],
       },
-      uavAnalyzer: {
-        title: "UAV Battery & Flight Performance Analyzer Prototype",
-        category: "AI Projects | UAV Analytics",
-        description:
-          "A professional web app for drone engineers and UAV operators to model battery consumption, flight time, and efficiency with precision.",
-        longDescription:
-          "Designed and prototyped with Figma Make, this client-side analyzer blends advanced mathematical models with environmental factors like wind, altitude, and temperature to deliver private, real-time predictions for mission planning.",
-        features: [
-          "iOS-style glassmorphic UI with frosted layers and smooth animations",
-          "Real-time calculations for battery usage, flight time, and efficiency",
-          "Advanced modeling for payload, speed, wind, altitude, and battery temperature",
-          "Save configurations and export as PDF, CSV, or JSON",
-        ],
-      },
       bpmbody: {
         title: "BPM Body WhatsApp Store",
         category: "AI Projects | Web Development",
@@ -738,21 +724,6 @@
           "Sinkronizim live që mban në linjë editorin dhe faqen",
           "Analitikë e integruar për klikime, vizitorë dhe trafik",
           "Auth dhe ruajtje me Supabase, UI responsive",
-        ],
-      },
-      uavAnalyzer: {
-        title:
-          "Analizues i Baterisë dhe Performancës së Fluturimit të UAV-it Prototip",
-        category: "Projekte AI | Analiza UAV",
-        description:
-          "Një aplikacion profesional për inxhinierët e dronëve dhe operatorët e UAV-ve për të modeluar me saktësi konsumimin e baterisë, kohën e fluturimit dhe efikasitetin.",
-        longDescription:
-          "I dizajnuar dhe prototipuar me Figma Make, ky analizues në anën e klientit kombinon modele të avancuara matematikore me faktorë mjedisorë si era, lartësia dhe temperatura për të ofruar parashikime të sakta në kohë reale duke i mbajtur të dhënat plotësisht lokale.",
-        features: [
-          "UI me stil iOS me efekte xhami të turbullta dhe animacione të lëmuara",
-          "Llogaritje në kohë reale për kohën e fluturimit, energjinë dhe efikasitetin",
-          "Modelim i avancuar për ngarkesën, shpejtësinë, erën, lartësinë dhe temperaturën e baterisë",
-          "Ruajtje dhe eksportim konfigurimesh (PDF / CSV / JSON)",
         ],
       },
       bpmbody: {
