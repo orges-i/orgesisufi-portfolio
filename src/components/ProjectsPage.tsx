@@ -576,7 +576,7 @@ export function ProjectsPage() {
             {t("projects.duoBass.features")[2]}
           </>,
         ],
-        demoUrl: "https://orges-i-duobassrecor-0ief.bolt.host/",
+        demoUrl: "https://www.duobassrecords.com/",
       },
 
       // CA Plombier Geneva Modern Website (added)
